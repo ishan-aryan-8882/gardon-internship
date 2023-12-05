@@ -183,3 +183,11 @@ nav-lower-part button {
   color: rgba(128, 128, 128, 0.264);
   margin-right: 20px;
 }
+
+@media (max-width:1413px) {
+    #nav-lmid-part{
+        /* border: 2px solid; */
+        width: 100%;
+        justify-content: end;
+    }
+}
