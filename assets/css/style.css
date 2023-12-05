@@ -28,7 +28,7 @@
 
 .hero-carousel img {
   object-fit: cover;
-  height: 100vh;
+  height: 95vh;
   filter: brightness(50%);
 }
 
