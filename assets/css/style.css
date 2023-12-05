@@ -79,6 +79,20 @@
   justify-content: center;
 }
 
+.hero-carousel .owl-nav .owl-prev,.hero-carousel .owl-nav .owl-next{
+  color: gray!important;
+  transition: all 0.5s ;
+}
+
+.hero-carousel .owl-nav .owl-prev:hover{
+  background-color: transparent!important;
+  color: black!important;
+}
+.hero-carousel .owl-nav .owl-next:hover{
+  background-color: transparent!important;
+  color: black!important;
+}
+
 nav {
   position: fixed;
   top: 20px;

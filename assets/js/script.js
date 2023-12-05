@@ -9,7 +9,7 @@ $(".hero-carousel").owlCarousel({
     "<i class='fa fa-long-arrow-left'></i>",
     "<i class='fa fa-long-arrow-right'></i>",
   ],
-  autoplayTimeout: 2000, // Adjust the timeout as needed
+  autoplayTimeout: 5000,
 });
 
 $(document).ready(function () {
