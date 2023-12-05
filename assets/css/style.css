@@ -75,6 +75,7 @@
   flex-direction: column;
   align-items: end;
   justify-content: center;
+  z-index: 10000;
 }
 
 .owl-carousel button {
@@ -405,3 +406,111 @@ nav-lower-part button {
 .small-nav-show-right{
     transform: translateX(0%);
 }
+
+#text-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    z-index: 1;
+    /* border: 2px solid; */
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+#text-container button{
+    width: fit-content;
+}
+
+#text-container h4{
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#text-container h1{
+    font-size: 96px;
+    line-height: 90px;
+    letter-spacing: -3.84px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+#text-container button{
+    padding: 15px 50px;
+    font-size: 16px;
+    line-height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    background-color: #2AB939;
+    color: white;
+    font-weight: 500;
+}
+
+@media (max-width:1199px) {
+    #text-container{
+        width: 95%;
+    }
+}
+@media (max-width:769px) {
+    #text-container{
+        width: 90%;
+    }
+    #text-container h4{
+        font-size: 19px;
+        margin-bottom: 5px;
+    }
+    #text-container h1{
+        font-size: 70px;
+        margin-bottom: 25px;
+    }
+    #text-container button{
+        font-size: 13px;
+    }
+}
+
+@media (max-width:757px){
+    .owl-dots {
+        display: none;
+    }
+}
+
+@media (max-width:575px) {
+    #text-container{
+        width: 90%;
+    }
+    #text-container h4{
+        font-size: 18px;
+        margin-bottom: 0px;
+    }
+    #text-container h1{
+        font-size: 70px;
+        margin-bottom: 25px;
+    }
+    #text-container button{
+        font-size: 12px;
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width:361px) {
+    #text-container{
+        padding: 0 10px;
+    }
+
+    #text-container h4{
+        font-size: 18px;
+        margin-bottom: -10px;
+    }
+    #text-container h1{
+        font-size: 58px;
+        margin-bottom: 25px;
+        line-height: 80px;
+    }
+}
+
