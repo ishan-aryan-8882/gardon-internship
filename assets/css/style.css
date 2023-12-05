@@ -10,6 +10,10 @@
   --topnav: #29b638;
 }
 
+.my-element {
+  border: 2px solid black;
+}
+
 .page1 {
   height: 85vw;
   width: 100vw;
@@ -19,7 +23,7 @@
 
 .hero-carousel img {
   /* object-fit: cover; */
-  height: 100%;
+  height: 100vh;
   width: 100vw;
   object-fit: cover;
   filter: brightness(60%);
@@ -184,10 +188,83 @@ nav-lower-part button {
   margin-right: 20px;
 }
 
-@media (max-width:1413px) {
-    #nav-lmid-part{
-        /* border: 2px solid; */
-        width: 100%;
-        justify-content: end;
-    }
+.fa-grip-lines {
+  color: var(--topnav);
+  font-size: 30px;
+}
+
+.mobile-show button {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+  line-height: 30px;
+  font-size: 12px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  z-index: 9;
+  color: black;
+  transform: all 0.5s;
+}
+
+.mobile-show button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  transform: translateY(-100px);
+  transition: all 0.2s;
+  z-index: -1;
+}
+
+.mobile-show button:hover:after {
+  transform: translateY(0);
+}
+
+.mobile-show button:hover {
+  color: rgb(255, 255, 255);
+}
+
+.mobile-show {
+  display: none;
+}
+
+@media (max-width: 1413px) {
+  #nav-lmid-part {
+    /* border: 2px solid; */
+    width: 100%;
+    justify-content: end;
+  }
+}
+
+@media (max-width: 1199px) {
+  #nav-lmid-part {
+    display: none;
+  }
+  nav-lower-part .fa-grip-lines,
+  nav-lower-part button {
+    display: block;
+    display: flex;
+  }
+  .mobile-show {
+    display: flex;
+    align-items: center;
+    /* border: 2px solid; */
+    width: 60%;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 993px) {
+  .mobile-show button {
+    display: none;
+  }
+  .mobile-show {
+   /* border: 2px solid black; */
+   width: 50%;
+  }
 }
