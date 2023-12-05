@@ -330,7 +330,7 @@ nav-lower-part button {
   background-color: var(--sidenav);
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 95vh;
   width: fit-content;
   align-items: start;
   justify-content: start;
