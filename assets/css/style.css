@@ -333,7 +333,8 @@ nav-lower-part button {
   height: 95vh;
   width: fit-content;
   align-items: start;
-  justify-content: start;
+  justify-content: space-evenly;
+
   position: absolute;
   top: 0;
   left: 0;
