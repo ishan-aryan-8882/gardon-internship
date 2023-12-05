@@ -257,14 +257,39 @@ nav-lower-part button {
     width: 60%;
     justify-content: space-around;
   }
+
+  nav-upper-part{
+    display: none;
+  }
+
+  nav-lower-part{
+    border-radius: 6px;
+  }
 }
 
-@media (max-width: 993px) {
+@media (max-width: 991px) {
   .mobile-show button {
     display: none;
   }
   .mobile-show {
-   /* border: 2px solid black; */
-   width: 50%;
+    /* border: 2px solid black; */
+    width: 50%;
+  }
+}
+
+@media (max-width: 769px) {
+  nav-lower-part #icons {
+    display: none;
+  }
+  #myimage {
+    height: 100%;
+  }
+  .mobile-show {
+    /* border: 2px solid black; */
+    width: 100%;
+    justify-content: end;
+  }
+  nav-lower-part{
+    overflow: hidden;
   }
 }
