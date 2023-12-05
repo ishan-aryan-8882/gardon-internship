@@ -8,6 +8,7 @@
 
 :root {
   --topnav: #29b638;
+  --sidenav: #192919;
 }
 
 .my-element {
@@ -65,7 +66,7 @@
 nav {
   position: fixed;
   top: 20px;
-  z-index: 9;
+  z-index: 1;
   left: 0;
   right: 0;
   width: 96%;
@@ -191,6 +192,7 @@ nav-lower-part button {
 .fa-grip-lines {
   color: var(--topnav);
   font-size: 30px;
+  cursor: pointer;
 }
 
 .mobile-show button {
@@ -292,4 +294,96 @@ nav-lower-part button {
   nav-lower-part{
     overflow: hidden;
   }
+}
+
+.nav-show-on-small-screen{
+    background-color:var(--sidenav);
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    width: fit-content;
+    align-items: start;
+    justify-content: start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    padding: 0 15px;
+    transform: translateX(-100%);
+    transition: all 0.8s;
+}
+
+.nav-show-on-small-screen .closing-cross{
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-show-on-small-screen a{
+    text-decoration: none;
+    color: white;
+    border-bottom:1px solid rgb(43, 69, 43);
+    padding: 15px 15px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.nav-show-on-small-screen a:first-child{
+    padding-top: 0;
+}
+
+.email-small,.phone-small,.icons-coll-small{
+    padding: 15px 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.email-small i{
+    font-size: 10px;
+    background-color: #008000;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.phone-small i {
+    font-size: 10px;
+    position: relative;
+    color: white;
+    background-color: #008000;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.phone-small i::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #008000;
+    padding: 10px;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.icons-coll-small{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons-coll-small i{
+    font-size: 18px;
+}
+
+.small-nav-show-right{
+    transform: translateX(0%);
 }
