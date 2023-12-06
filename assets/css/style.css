@@ -117,7 +117,7 @@
 nav {
   position: fixed;
   top: 20px;
-  z-index: 9;
+  z-index: 11;
   left: 0;
   right: 0;
   width: 96%;
@@ -135,6 +135,7 @@ nav-upper-part {
   margin-bottom: 3px;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
+  transition: all 0.2s;
 }
 
 #nav-uleft-side {
@@ -192,6 +193,7 @@ nav-lower-part {
   gap: 30px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  transition: all 1s;
 }
 
 nav-lower-part img {
@@ -578,4 +580,10 @@ nav-lower-part button {
   .circular-div{
     display: none;
   }
+}
+
+.page2{
+  width: 100vw;
+  height: 100vh;
+  background-color: #efefef;
 }

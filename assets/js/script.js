@@ -190,3 +190,33 @@ nextCarousel.addEventListener("click", () => {
     });
   }, 400);
 });
+
+window.addEventListener("scroll", () => {
+  let page1 = document.querySelector(".page1");
+  let navUpperPart = document.querySelector("nav-upper-part");
+  let navLowerPart = document.querySelector("nav-lower-part");
+  let nav = document.querySelector("nav");
+
+  let rect1 = page1.getBoundingClientRect();
+  if (rect1.bottom <= 0) {
+    navUpperPart.style.display = "none";
+    navLowerPart.style.borderRadius = "6px";
+    nav.style.top = "-20px";
+    gsap.to(nav, {
+      top: "-20",
+      duration: 1,
+      ease: "power2.inOut",
+    });
+  } else {
+    navUpperPart.style.display = "flex";
+    navLowerPart.style.borderRadius = "0px";
+    navLowerPart.style.borderBottomLeftRadius = "6px";
+    navLowerPart.style.borderBottomRightRadius = "6px";
+    // nav.style.top='20px';
+    gsap.to(nav, {
+      top: "20",
+      duration: 0.1,
+      ease: "power2.inOut",
+    });
+  }
+});
