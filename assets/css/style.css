@@ -454,6 +454,7 @@ nav-lower-part button {
   display: flex;
   flex-direction: column;
   /* pointer-events: none; */
+  overflow: hidden;
 }
 
 #text-container button {

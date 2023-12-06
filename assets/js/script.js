@@ -41,19 +41,68 @@ let cursor = document.querySelector(".circular-div");
 document.addEventListener("mousemove", (dets) => {
   gsap.to(cursor, {
     top: dets.y + 15,
-    left: dets.x + 15
+    left: dets.x + 15,
   });
 });
 
-document.addEventListener('mouseleave',()=>{
-  gsap.to(cursor,{
-    scale:0,
-    opacity:0
-  })
-})
-document.addEventListener('mouseenter',()=>{
-  gsap.to(cursor,{
-    scale:1,
-    opacity:1
-  })
-})
+document.addEventListener("mouseleave", () => {
+  gsap.to(cursor, {
+    scale: 0,
+    opacity: 0,
+  });
+});
+document.addEventListener("mouseenter", () => {
+  gsap.to(cursor, {
+    scale: 1,
+    opacity: 1,
+  });
+});
+
+let tch1 = document.querySelector("#text-container h1");
+let tch4 = document.querySelector("#text-container h4");
+let tcbutton = document.querySelector("#text-container button");
+
+setInterval(() => {
+  gsap.to(tch1, {
+    y: "-550%",
+    ease: "power2.inOut",
+  });
+
+  setTimeout(() => {
+    gsap.to(tch1, {
+      y: "0%",
+      ease: "power2.inOut",
+      duration:2,
+    });
+  }, 200);
+}, 4900);
+
+setInterval(() => {
+  gsap.to(tch4, {
+    y: "-150%",
+    ease: "power2.inOut",
+  });
+
+  setTimeout(() => {
+    gsap.to(tch4, {
+      y: "0%",
+      ease: "power2.inOut",
+      duration:1,
+    });
+  }, 400);
+}, 4900);
+
+setInterval(() => {
+  gsap.to(tcbutton, {
+    y: "500%",
+    ease: "power2.inOut",
+  });
+
+  setTimeout(() => {
+    gsap.to(tcbutton, {
+      y: "0%",
+      ease: "power2.inOut",
+      duration:1,
+    });
+  }, 400);
+}, 4900);
