@@ -1,18 +1,18 @@
-$(".hero-carousel").owlCarousel({
-  loop: true,
-  autoplay: true,
-  items: 1,
-  nav: true,
-  animateOut: "slideOutUp",
-  animateIn: "slideInUp",
-  navText: [
-    "<i class='fa fa-long-arrow-left'></i>",
-    "<i class='fa fa-long-arrow-right'></i>",
-  ],
-  autoplayTimeout: 5000,
-});
-
 $(document).ready(function () {
+  $(".hero-carousel").owlCarousel({
+    loop: true,
+    autoplay: true,
+    items: 1,
+    nav: true,
+    animateOut: "slideOutUp",
+    animateIn: "slideInUp",
+    navText: [
+      "<i class='fa fa-long-arrow-left'></i>",
+      "<i class='fa fa-long-arrow-right'></i>",
+    ],
+    autoplayTimeout: 5000,
+  });
+
   function changeImgSrc() {
     var image = $("#myimage");
     if ($(window).width() < 770) {
@@ -23,199 +23,223 @@ $(document).ready(function () {
   }
 
   $(window).on("load resize", changeImgSrc);
-});
 
-let burgerMenu = document.querySelector(".fa-grip-lines");
-let sideMenu = document.querySelector(".nav-show-on-small-screen");
-let cross = document.querySelector(".closing-cross");
+  let burgerMenu = $(".fa-grip-lines");
+  let sideMenu = $(".nav-show-on-small-screen");
+  let cross = $(".closing-cross");
 
-burgerMenu.addEventListener("click", () => {
-  sideMenu.classList.toggle("small-nav-show-right");
-});
-
-cross.addEventListener("click", () => {
-  sideMenu.classList.remove("small-nav-show-right");
-});
-
-let cursor = document.querySelector(".circular-div");
-document.addEventListener("mousemove", (dets) => {
-  gsap.to(cursor, {
-    top: dets.y + 15,
-    left: dets.x + 15,
+  burgerMenu.on("click", function () {
+    sideMenu.toggleClass("small-nav-show-right");
   });
-});
 
-document.addEventListener("mouseleave", () => {
-  gsap.to(cursor, {
-    scale: 0,
-    opacity: 0,
+  cross.on("click", function () {
+    sideMenu.removeClass("small-nav-show-right");
   });
-});
-document.addEventListener("mouseenter", () => {
-  gsap.to(cursor, {
-    scale: 1,
-    opacity: 1,
+
+  let cursor = $(".circular-div");
+  $(document).on("mousemove", function (dets) {
+    gsap.to(cursor, {
+      top: dets.y + 15,
+      left: dets.x + 15,
+    });
   });
-});
 
-function textcontainerAnimate() {
-  let tch1 = document.querySelector("#text-container h1");
-  let tch4 = document.querySelector("#text-container h4");
-  let tcbutton = document.querySelector("#text-container button");
+  $(document).on("mouseleave", function () {
+    gsap.to(cursor, {
+      scale: 0,
+      opacity: 0,
+    });
+  });
 
-  setInterval(() => {
+  $(document).on("mouseenter", function () {
+    gsap.to(cursor, {
+      scale: 1,
+      opacity: 1,
+    });
+  });
+
+  function textcontainerAnimate() {
+    let tch1 = $("#text-container h1");
+    let tch4 = $("#text-container h4");
+    let tcbutton = $("#text-container button");
+
+    let intervalId1 = setInterval(function () {
+      gsap.to(tch1, {
+        y: "-550%",
+        opacity: 0,
+        ease: "power2.inOut",
+      });
+
+      setTimeout(function () {
+        gsap.to(tch1, {
+          y: "0%",
+          opacity: 1,
+          ease: "power2.inOut",
+          duration: 2,
+        });
+      }, 200);
+    }, 4900);
+
+    let intervalId2 = setInterval(function () {
+      gsap.to(tch4, {
+        y: "-150%",
+        opacity: 0,
+        ease: "power2.inOut",
+      });
+
+      setTimeout(function () {
+        gsap.to(tch4, {
+          y: "0%",
+          opacity: 1,
+          ease: "power2.inOut",
+          duration: 1,
+        });
+      }, 400);
+    }, 4900);
+
+    let intervalId3 = setInterval(function () {
+      gsap.to(tcbutton, {
+        y: "500%",
+        ease: "power2.inOut",
+      });
+
+      setTimeout(function () {
+        gsap.to(tcbutton, {
+          y: "0%",
+          ease: "power2.inOut",
+          duration: 1,
+        });
+      }, 400);
+    }, 4900);
+
+    return [intervalId1, intervalId2, intervalId3];
+  }
+
+  let intervalIds = textcontainerAnimate();
+
+  let prevCarousel = $(".hero-carousel .owl-nav .owl-prev");
+  prevCarousel.on("click", function () {
+    intervalIds.forEach(clearInterval);
+    let tch1 = $("#text-container h1");
+    let tch4 = $("#text-container h4");
+    let tcbutton = $("#text-container button");
     gsap.to(tch1, {
       y: "-550%",
+      opacity: 0,
       ease: "power2.inOut",
     });
-
-    setTimeout(() => {
+    setTimeout(function () {
       gsap.to(tch1, {
         y: "0%",
+        opacity: 1,
         ease: "power2.inOut",
         duration: 2,
       });
     }, 200);
-  }, 4900);
-
-  setInterval(() => {
     gsap.to(tch4, {
       y: "-150%",
+      opacity: 0,
       ease: "power2.inOut",
     });
-
-    setTimeout(() => {
+    setTimeout(function () {
       gsap.to(tch4, {
         y: "0%",
+        opacity: 1,
         ease: "power2.inOut",
         duration: 1,
       });
     }, 400);
-  }, 4900);
-
-  setInterval(() => {
     gsap.to(tcbutton, {
       y: "500%",
       ease: "power2.inOut",
     });
-
-    setTimeout(() => {
+    setTimeout(function () {
       gsap.to(tcbutton, {
         y: "0%",
         ease: "power2.inOut",
         duration: 1,
       });
     }, 400);
-  }, 4900);
-}
-
-textcontainerAnimate();
-
-let prevCarousel = document.querySelector(".hero-carousel .owl-nav .owl-prev");
-prevCarousel.addEventListener("click", () => {
-  let tch1 = document.querySelector("#text-container h1");
-  let tch4 = document.querySelector("#text-container h4");
-  let tcbutton = document.querySelector("#text-container button");
-  gsap.to(tch1, {
-    y: "-550%",
-    ease: "power2.inOut",
   });
-  setTimeout(() => {
+
+  let nextCarousel = $(".hero-carousel .owl-nav .owl-next");
+  nextCarousel.on("click", function () {
+    intervalIds.forEach(clearInterval);
+    let tch1 = $("#text-container h1");
+    let tch4 = $("#text-container h4");
+    let tcbutton = $("#text-container button");
     gsap.to(tch1, {
-      y: "0%",
+      y: "-550%",
+      opacity: 0,
       ease: "power2.inOut",
-      duration: 2,
     });
-  }, 200);
-  gsap.to(tch4, {
-    y: "-150%",
-    ease: "power2.inOut",
-  });
-  setTimeout(() => {
+    setTimeout(function () {
+      gsap.to(tch1, {
+        y: "0%",
+        opacity: 1,
+        ease: "power2.inOut",
+        duration: 2,
+      });
+    }, 200);
     gsap.to(tch4, {
-      y: "0%",
+      y: "-150%",
+      opacity: 0,
       ease: "power2.inOut",
-      duration: 1,
     });
-  }, 400);
-  gsap.to(tcbutton, {
-    y: "500%",
-    ease: "power2.inOut",
-  });
-  setTimeout(() => {
+    setTimeout(function () {
+      gsap.to(tch4, {
+        y: "0%",
+        opacity: 1,
+        ease: "power2.inOut",
+        duration: 1,
+      });
+    }, 400);
     gsap.to(tcbutton, {
-      y: "0%",
+      y: "500%",
       ease: "power2.inOut",
-      duration: 1,
     });
-  }, 400);
-});
+    setTimeout(function () {
+      gsap.to(tcbutton, {
+        y: "0%",
+        ease: "power2.inOut",
+        duration: 1,
+      });
+    }, 400);
+  });
 
-let nextCarousel = document.querySelector(".hero-carousel .owl-nav .owl-next");
-nextCarousel.addEventListener("click", () => {
-  let tch1 = document.querySelector("#text-container h1");
-  let tch4 = document.querySelector("#text-container h4");
-  let tcbutton = document.querySelector("#text-container button");
-  gsap.to(tch1, {
-    y: "-550%",
+  $(window).on("scroll", function () {
+    let page1 = $(".page1");
+    let navUpperPart = $("nav-upper-part");
+    let navLowerPart = $("nav-lower-part");
+    let nav = $("nav");
+    let rect1 = page1[0].getBoundingClientRect();
+    if (rect1.bottom <= 0) {
+      navUpperPart.css("display", "none");
+      navLowerPart.css("borderRadius", "6px");
+      nav.css("top", "-20px");
+      gsap.to(nav, {
+        top: "0",
+        duration: 0.5,
+        ease: "power2.inOut",
+      });
+    } else {
+      navUpperPart.css("display", "flex");
+      navLowerPart.css("borderRadius", "0px");
+      navLowerPart.css("borderBottomLeftRadius", "6px");
+      navLowerPart.css("borderBottomRightRadius", "6px");
+      gsap.to(nav, {
+        top: "20",
+        duration: 0.1,
+        ease: "power2.inOut",
+      });
+    }
+  });
+
+  let gardenwomen = $("#women-garden");
+  gsap.from(gardenwomen, {
+    left: '-100%',
+    opacity: 0,
+    duration: 1,
     ease: "power2.inOut",
   });
-  setTimeout(() => {
-    gsap.to(tch1, {
-      y: "0%",
-      ease: "power2.inOut",
-      duration: 2,
-    });
-  }, 200);
-  gsap.to(tch4, {
-    y: "-150%",
-    ease: "power2.inOut",
-  });
-  setTimeout(() => {
-    gsap.to(tch4, {
-      y: "0%",
-      ease: "power2.inOut",
-      duration: 1,
-    });
-  }, 400);
-  gsap.to(tcbutton, {
-    y: "500%",
-    ease: "power2.inOut",
-  });
-  setTimeout(() => {
-    gsap.to(tcbutton, {
-      y: "0%",
-      ease: "power2.inOut",
-      duration: 1,
-    });
-  }, 400);
 });
-
-window.addEventListener("scroll", () => {
-  let page1 = document.querySelector(".page1");
-  let navUpperPart = document.querySelector("nav-upper-part");
-  let navLowerPart = document.querySelector("nav-lower-part");
-  let nav = document.querySelector("nav");
-  let rect1 = page1.getBoundingClientRect();
-  if (rect1.bottom <= 0) {
-    navUpperPart.style.display = "none";
-    navLowerPart.style.borderRadius = "6px";
-    nav.style.top = "-20px";
-    gsap.to(nav, {
-      top: "0",
-      duration: 1,
-      ease: "power2.inOut",
-    });
-  } else {
-    navUpperPart.style.display = "flex";
-    navLowerPart.style.borderRadius = "0px";
-    navLowerPart.style.borderBottomLeftRadius = "6px";
-    navLowerPart.style.borderBottomRightRadius = "6px";
-    gsap.to(nav, {
-      top: "20",
-      duration: 0.1,
-      ease: "power2.inOut",
-    });
-  }
-});
-
