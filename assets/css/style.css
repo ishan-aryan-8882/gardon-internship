@@ -95,6 +95,7 @@
   flex-direction: column;
   align-items: end;
   justify-content: center;
+  z-index: 11;
 }
 
 .hero-carousel .owl-nav .owl-prev,
@@ -447,7 +448,7 @@ nav-lower-part button {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  z-index: 1;
+  z-index: 10;
   /* border: 2px solid; */
   width: 75%;
   display: flex;
@@ -568,5 +569,12 @@ nav-lower-part button {
     font-size: 58px;
     margin-bottom: 25px;
     line-height: 80px;
+  }
+}
+
+
+@media (max-width:767px) {
+  .circular-div{
+    display: none;
   }
 }
