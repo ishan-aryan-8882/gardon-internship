@@ -582,6 +582,12 @@ nav-lower-part button {
   }
 }
 
+@media (max-width:1199px) {
+  nav{
+    position: absolute;
+  }
+}
+
 .page2{
   width: 100vw;
   height: 100vh;
