@@ -11,8 +11,26 @@
   --sidenav: #192919;
 }
 
-.my-element {
-  border: 2px solid black;
+.circular-div {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(4, 214, 4, 0.5);
+  position: fixed;
+  z-index: 10;
+  border-radius: 50%;
+
+}
+
+.circular-div::after{
+  position: absolute;
+  content: '';
+  inset: 0;
+  border:2px solid rgba(4, 214, 4, 0.5);
+  padding: 12px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
 }
 
 .page1 {
@@ -22,7 +40,7 @@
   /* overflow: hidden; */
 }
 
-.hero-carousel{
+.hero-carousel {
   position: relative;
 }
 
@@ -79,18 +97,20 @@
   justify-content: center;
 }
 
-.hero-carousel .owl-nav .owl-prev,.hero-carousel .owl-nav .owl-next{
-  color: gray!important;
-  transition: all 0.5s ;
+.hero-carousel .owl-nav .owl-prev,
+.hero-carousel .owl-nav .owl-next {
+  color: gray !important;
+  transition: all 0.5s;
+  z-index: 1000!important;
 }
 
-.hero-carousel .owl-nav .owl-prev:hover{
-  background-color: transparent!important;
-  color: black!important;
+.hero-carousel .owl-nav .owl-prev:hover {
+  background-color: transparent !important;
+  color: black !important;
 }
-.hero-carousel .owl-nav .owl-next:hover{
-  background-color: transparent!important;
-  color: black!important;
+.hero-carousel .owl-nav .owl-next:hover {
+  background-color: transparent !important;
+  color: black !important;
 }
 
 nav {

@@ -36,3 +36,24 @@ burgerMenu.addEventListener("click", () => {
 cross.addEventListener("click", () => {
   sideMenu.classList.remove("small-nav-show-right");
 });
+
+let cursor = document.querySelector(".circular-div");
+document.addEventListener("mousemove", (dets) => {
+  gsap.to(cursor, {
+    top: dets.y + 15,
+    left: dets.x + 15
+  });
+});
+
+document.addEventListener('mouseleave',()=>{
+  gsap.to(cursor,{
+    scale:0,
+    opacity:0
+  })
+})
+document.addEventListener('mouseenter',()=>{
+  gsap.to(cursor,{
+    scale:1,
+    opacity:1
+  })
+})
