@@ -34,7 +34,6 @@
 
 .page1 {
   width: 100vw;
-  background-color: rgb(0, 0, 0);
   position: relative;
   /* overflow: hidden; */
 }
@@ -895,7 +894,7 @@ nav-lower-part button {
   flex-direction: column;
   align-items: center;
   gap: 20px ;
-  border: 1px solid rgb(109, 117, 109);
+  border: 1px solid rgb(40,60,40);
   border-radius: 6px;
   padding: 20px;
   width: fit-content;
@@ -948,17 +947,36 @@ nav-lower-part button {
   color: white;
 }
 
-.services .item img.log{
-  width: 70px!important;
-  height: 70px!important;
+.services .item .log{
+  width: 90px!important;
+  height: 90px!important;
   object-fit: contain;
   position: absolute;
-  background-color: #0a2d0d;
-  padding: 10px;
+  padding: 7px;
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   border: 2px dotted #29b638;
-  box-sizing: content-box;
+  transition: all 0.2s ease-in-out;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services .item .log img{
+  width: 100%!important;
+  height: 100%!important;
+  object-fit: contain!important;
+  transition: all 0.3s;
+  margin: auto;
+  background-color: #0a2d0d;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.services .item .log img:hover{
+  width: 90%!important;
+  height: 90%!important;
 }
