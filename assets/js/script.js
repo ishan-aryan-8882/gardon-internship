@@ -37,10 +37,10 @@ $(document).ready(function () {
   });
 
   let cursor = $(".circular-div");
-  $(document).on("mousemove", function (dets) {
+  $(document).on("mousemove", function (e) {
     gsap.to(cursor, {
-      top: dets.y + 15,
-      left: dets.x + 15,
+      top: e.clientY + 15,
+      left: e.clientX + 15,
     });
   });
 
@@ -213,13 +213,13 @@ $(document).ready(function () {
     let navLowerPart = $("nav-lower-part");
     let nav = $("nav");
     let rect1 = page1[0].getBoundingClientRect();
-    if (rect1.bottom <= 0) {
+    if (rect1.top <= 100) {
       navUpperPart.css("display", "none");
       navLowerPart.css("borderRadius", "6px");
       nav.css("top", "-20px");
       gsap.to(nav, {
         top: "0",
-        duration: 0.5,
+        duration: 1,
         ease: "power2.inOut",
       });
     } else {
@@ -237,9 +237,9 @@ $(document).ready(function () {
 
   let gardenwomen = $("#women-garden");
   gsap.from(gardenwomen, {
-    left: '-100%',
-    opacity: 0,
-    duration: 1,
+    x:'-100%',
+    opacity:0,
+    duration: 2,
     ease: "power2.inOut",
   });
 });

@@ -16,7 +16,7 @@
   height: 10px;
   background-color: rgba(4, 214, 4, 0.5);
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   border-radius: 50%;
 }
 
@@ -758,10 +758,13 @@ nav-lower-part button {
   z-index: -1;
   transform: translateY(-100%);
   transition: all 0.8s;
+  opacity: 0;
+  border: none;
 }
 
 .subflexbox2 button:hover:after {
   transform: translateY(0%);
+  opacity: 1;
 }
 
 .flexbox2 {
