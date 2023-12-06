@@ -242,4 +242,15 @@ $(document).ready(function () {
     duration: 2,
     ease: "power2.inOut",
   });
+
+  let greenBoxIcon = $(".green-icon-box");
+  greenBoxIcon.each((index,element)=>{
+    setTimeout(()=>{
+      gsap.from(element,{
+        y:'100%',
+        opacity:'0',
+        duration:0.5,
+      })
+    },index*100)
+  })
 });
