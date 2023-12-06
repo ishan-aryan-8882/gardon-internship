@@ -844,3 +844,121 @@ nav-lower-part button {
     padding: 30px;
   }
 }
+
+.page3{
+  width: 100vw;
+  height: 95vh;
+  background-color: #182818;
+  margin: 100px 0;
+}
+
+.page3-contents{
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  /* border: 2px solid rgba(255, 255, 255, 0.222); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.page3-contents .top-part-text{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid rgba(255, 255, 255, 0.222); */
+  gap: 10px;
+}
+
+.page3-contents .top-part-text img{
+    width: 40px;
+    margin-bottom: 3px;
+}
+
+.page3-contents .top-part-text span{
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  color: RGB(119, 133, 119);
+  letter-spacing: 1.2px;
+}
+
+.page3-contents .top-part-text h2{
+  font-size: 46px;
+  line-height: 55px;
+  letter-spacing: -1.84px;
+  font-weight: 600;
+}
+
+.services .item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px ;
+  border: 1px solid rgb(109, 117, 109);
+  border-radius: 6px;
+  padding: 20px;
+  width: fit-content;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.services .item img{
+  width: 330px!important;
+  height: 210px!important;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 60px;
+}
+
+.services .item a{
+  text-decoration: none;
+  font-size: 24px;
+  letter-spacing: -0.9px;
+  line-height: 34px;
+  font-weight: 600;
+  color: white;
+}
+
+.services .item p{
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 400;
+  color: rgb(119,133,119);
+  text-align: center;
+}
+
+.services .item button{
+  font-size: 12px;
+  line-height: 30px;
+  font-weight: 600;
+  padding: 4px 30px;
+  color: white;
+  background-color: rgb(40,60,40);
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  border-radius: 4px;
+  margin: auto;
+}
+
+.services .item button i{
+  color: white;
+}
+
+.services .item img.log{
+  width: 70px!important;
+  height: 70px!important;
+  object-fit: contain;
+  position: absolute;
+  background-color: #0a2d0d;
+  padding: 10px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 2px dotted #29b638;
+  box-sizing: content-box;
+}

@@ -94,7 +94,7 @@ $(document).ready(function () {
           ease: "power2.inOut",
           duration: 1,
         });
-      }, 400);
+      }, 900);
     }, 4900);
 
     let intervalId3 = setInterval(function () {
@@ -148,7 +148,7 @@ $(document).ready(function () {
         ease: "power2.inOut",
         duration: 1,
       });
-    }, 400);
+    }, 900);
     gsap.to(tcbutton, {
       y: "500%",
       ease: "power2.inOut",
@@ -193,7 +193,7 @@ $(document).ready(function () {
         ease: "power2.inOut",
         duration: 1,
       });
-    }, 400);
+    }, 900);
     gsap.to(tcbutton, {
       y: "500%",
       ease: "power2.inOut",
@@ -248,7 +248,7 @@ $(document).ready(function () {
       gsap.to(gardenwomen, {
         x: "0",
         opacity: 1,
-        duration: 2,
+        duration: 0.8,
         ease: "power2.inOut",
       });
 
@@ -267,4 +267,11 @@ $(document).ready(function () {
       },2000)
     }
   });
+
+  $('.services').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    autoplay:true,
+})
 });
