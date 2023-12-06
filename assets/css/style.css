@@ -313,7 +313,7 @@ nav-lower-part button {
   }
 
   nav-upper-part {
-    display: none;
+    display: none !important;
   }
 
   nav-lower-part {
