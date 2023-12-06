@@ -235,22 +235,36 @@ $(document).ready(function () {
     }
   });
 
-  let gardenwomen = $("#women-garden");
-  gsap.from(gardenwomen, {
-    x:'-100%',
-    opacity:0,
-    duration: 2,
-    ease: "power2.inOut",
-  });
+  let animationsTriggered = false;
 
-  let greenBoxIcon = $(".green-icon-box");
-  greenBoxIcon.each((index,element)=>{
-    setTimeout(()=>{
-      gsap.from(element,{
-        y:'100%',
-        opacity:'0',
-        duration:0.5,
-      })
-    },index*100)
-  })
+  $(window).on("scroll", function () {
+    let page2 = $(".page2");
+    let rect2 = page2[0].getBoundingClientRect();
+    let windowHeight = $(window).height();
+    if (rect2.top < windowHeight * 0.5 && !animationsTriggered) {
+      let gardenwomen = $("#women-garden");
+      let greenBoxIcon = $(".green-icon-box");
+
+      gsap.to(gardenwomen, {
+        x: "0",
+        opacity: 1,
+        duration: 2,
+        ease: "power2.inOut",
+      });
+
+      greenBoxIcon.each((index, element) => {
+        setTimeout(() => {
+          gsap.to(element, {
+            y: "0",
+            opacity: "1",
+            duration: 1,
+          });
+        }, index * 500);
+      });
+      animationsTriggered = true;
+      setTimeout(()=>{
+        gardenwomen.css("opacity" , "1")
+      },2000)
+    }
+  });
 });

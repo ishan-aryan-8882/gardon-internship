@@ -622,6 +622,8 @@ nav-lower-part button {
   width: 100%;
   border-radius: 50%;
   object-fit: cover;
+  transform: translateX(-100%);
+  opacity: 0;
 }
 
 .subflexbox2 {
@@ -785,6 +787,8 @@ nav-lower-part button {
   padding: 30px 20px;
   border-bottom-right-radius: 50px;
   border-top-left-radius: 50px;
+  transform: translateY(100%);
+  opacity: 0;
 }
 
 .green-icon-box .black-text {
