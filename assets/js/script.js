@@ -58,51 +58,135 @@ document.addEventListener("mouseenter", () => {
   });
 });
 
-let tch1 = document.querySelector("#text-container h1");
-let tch4 = document.querySelector("#text-container h4");
-let tcbutton = document.querySelector("#text-container button");
+function textcontainerAnimate() {
+  let tch1 = document.querySelector("#text-container h1");
+  let tch4 = document.querySelector("#text-container h4");
+  let tcbutton = document.querySelector("#text-container button");
 
-setInterval(() => {
+  setInterval(() => {
+    gsap.to(tch1, {
+      y: "-550%",
+      ease: "power2.inOut",
+    });
+
+    setTimeout(() => {
+      gsap.to(tch1, {
+        y: "0%",
+        ease: "power2.inOut",
+        duration: 2,
+      });
+    }, 200);
+  }, 4900);
+
+  setInterval(() => {
+    gsap.to(tch4, {
+      y: "-150%",
+      ease: "power2.inOut",
+    });
+
+    setTimeout(() => {
+      gsap.to(tch4, {
+        y: "0%",
+        ease: "power2.inOut",
+        duration: 1,
+      });
+    }, 400);
+  }, 4900);
+
+  setInterval(() => {
+    gsap.to(tcbutton, {
+      y: "500%",
+      ease: "power2.inOut",
+    });
+
+    setTimeout(() => {
+      gsap.to(tcbutton, {
+        y: "0%",
+        ease: "power2.inOut",
+        duration: 1,
+      });
+    }, 400);
+  }, 4900);
+}
+
+textcontainerAnimate();
+
+let prevCarousel = document.querySelector(".hero-carousel .owl-nav .owl-prev");
+prevCarousel.addEventListener("click", () => {
+  let tch1 = document.querySelector("#text-container h1");
+  let tch4 = document.querySelector("#text-container h4");
+  let tcbutton = document.querySelector("#text-container button");
   gsap.to(tch1, {
     y: "-550%",
     ease: "power2.inOut",
   });
-
   setTimeout(() => {
     gsap.to(tch1, {
       y: "0%",
       ease: "power2.inOut",
-      duration:2,
+      duration: 2,
     });
   }, 200);
-}, 4900);
-
-setInterval(() => {
   gsap.to(tch4, {
     y: "-150%",
     ease: "power2.inOut",
   });
-
   setTimeout(() => {
     gsap.to(tch4, {
       y: "0%",
       ease: "power2.inOut",
-      duration:1,
+      duration: 1,
     });
   }, 400);
-}, 4900);
-
-setInterval(() => {
   gsap.to(tcbutton, {
     y: "500%",
     ease: "power2.inOut",
   });
-
   setTimeout(() => {
     gsap.to(tcbutton, {
       y: "0%",
       ease: "power2.inOut",
-      duration:1,
+      duration: 1,
     });
   }, 400);
-}, 4900);
+});
+
+let nextCarousel = document.querySelector(".hero-carousel .owl-nav .owl-next");
+nextCarousel.addEventListener("click", () => {
+  let tch1 = document.querySelector("#text-container h1");
+  let tch4 = document.querySelector("#text-container h4");
+  let tcbutton = document.querySelector("#text-container button");
+  gsap.to(tch1, {
+    y: "-550%",
+    ease: "power2.inOut",
+  });
+  setTimeout(() => {
+    gsap.to(tch1, {
+      y: "0%",
+      ease: "power2.inOut",
+      duration: 2,
+    });
+  }, 200);
+  gsap.to(tch4, {
+    y: "-150%",
+    ease: "power2.inOut",
+  });
+  setTimeout(() => {
+    gsap.to(tch4, {
+      y: "0%",
+      ease: "power2.inOut",
+      duration: 1,
+    });
+  }, 400);
+  gsap.to(tcbutton, {
+    y: "500%",
+    ease: "power2.inOut",
+  });
+  setTimeout(() => {
+    gsap.to(tcbutton, {
+      y: "0%",
+      ease: "power2.inOut",
+      duration: 1,
+    });
+  }, 400);
+});
