@@ -975,7 +975,7 @@ nav-lower-part button {
   border-radius: 50%;
   border: 2px dotted #29b638;
   transition: all 0.2s ease-in-out;
-  background-color: black;
+  background-color: #182818;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -987,7 +987,7 @@ nav-lower-part button {
   object-fit: contain!important;
   transition: all 0.3s;
   margin: auto;
-  background-color: #0a2d0d;
+  background-color: #ffffff;
   border-radius: 50%;
   padding: 10px;
 }
@@ -1025,6 +1025,14 @@ nav-lower-part button {
   right: 0;
   top: 10%;
   transform: translateY(-10%);
+  cursor: pointer;
+  transition: all 0.5s;
+  font-weight: 900;
+}
+
+.page3 .owl-prev:hover, .page3 .owl-next:hover{
+  color: white;
+  border-color: white;
 }
 
 .page3 .owl-prev{
