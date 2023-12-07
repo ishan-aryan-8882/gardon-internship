@@ -849,6 +849,7 @@ nav-lower-part button {
   background-color: #182818;
   margin: 100px 0;
   padding: 150px 0;
+  margin-bottom: 0;
 }
 
 .page3-contents {
@@ -1108,4 +1109,156 @@ nav-lower-part button {
   .top-part-text h2 {
     font-size: 45px !important;
   }
+}
+
+.page4{
+  width: 100vw;
+  margin-bottom: 100px;
+  padding: 100px 0;
+  border: 2px solid;
+  background: url('https://bracketweb.com/gardon-html/main-html/assets/images/shapes/process-one-shape-1.png') no-repeat bottom/contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #EEF3EB;
+  flex-wrap: wrap;
+}
+
+.page4 .logo-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page4 .logo-section img{
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.page4 .logo-section span{
+  color: rgb(109,117,109);
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+}
+
+.page4 h2{
+  font-size: 46px;
+  line-height: 55px;
+  letter-spacing: -1.84px;
+  font-weight: 600;
+  width: 35%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page4 .small-banner{
+  display: flex;
+  gap: 80px;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.page4 .small-banner p{
+  color: rgb(25,41,25);
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.page4 .small-banner button{
+  background-color: RGB(42, 185, 57);
+  padding: 4px 40px;
+  border: none;
+  border-radius: 6px;
+}
+
+.page4 .small-banner button a{
+  text-decoration: none;
+  color: RGB(255, 255, 255);
+  font-size: 12px;
+  line-height: 30px;
+  font-weight: 600
+}
+
+.circle-contents{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  /* border: 2px solid; */
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.four-box-containing-circle{
+  width: 20%;
+  padding: 10px;
+  /* border: 2px solid; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.four-box-containing-circle .circle .inner-circle i{
+  font-size: 60px;
+}
+
+.four-box-containing-circle .circle .inner-circle {
+  background-color: #F0F4ED;
+  padding: 18px 31px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.four-box-containing-circle .circle .inner-circle::after{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: linear-gradient(90deg,#1C3F1E,#29B037);
+  z-index: -1;
+  width: 0;
+  height: 0;
+  transition: all 0.5s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+}
+
+.four-box-containing-circle:hover .circle .inner-circle::after{
+  width: 100%;
+  height: 100%;
+}
+
+.four-box-containing-circle:hover .circle .inner-circle i{
+  color: white;  
+}
+
+.four-box-containing-circle .circle{
+  padding: 15px;
+  border: 2px dotted #29b638;
+  border-radius: 50%;
+  background-color: #F5F8F3;
+}
+
+.four-box-containing-circle h4{
+  color: RGB(25, 41, 25);
+  font-size: 20px;
+  letter-spacing: -0.8px;
+  line-height: 30px;
+  font-weight: 600;
+}
+.four-box-containing-circle p{
+  color: RGB(109, 117, 109);
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
 }
