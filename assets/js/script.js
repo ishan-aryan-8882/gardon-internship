@@ -294,9 +294,12 @@ $(document).ready(function () {
     dots: true,
     autoplay: true,
     responsive: {
-      0: {
+      758: {
         items: 2,
       },
+      0:{
+        items:1,
+      }
     },
   });
   // this is the ending parenthesis
