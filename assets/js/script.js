@@ -306,16 +306,17 @@ $(document).ready(function () {
   $(".projects").owlCarousel({
     loop: true,
     margin: 30,
-    nav: true,
+    nav: false,
+    dots:false,
     autoplay: true,
     responsive: {
       0: {
         items: 1,
       },
-      600: {
+      768: {
         items: 3,
       },
-      1000: {
+      1300: {
         items: 5,
       },
     },
