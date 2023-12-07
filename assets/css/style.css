@@ -6,6 +6,10 @@
   font-family: "Lexend", sans-serif;
 }
 
+html,body{
+  overflow-x: hidden!important;
+}
+
 :root {
   --topnav: #29b638;
   --sidenav: #192919;
@@ -1563,6 +1567,7 @@ nav-lower-part button {
 
 .page6 .projects-text img{
   width: 40px;
+  margin-bottom: 10px;
 }
 
 .page6 .projects-text span{
@@ -1571,6 +1576,7 @@ nav-lower-part button {
   line-height: 12px;
   letter-spacing: 1.2px;
   font-weight: 400;
+  margin-bottom: 30px;
 }
 
 .page6 .projects-text h2{
