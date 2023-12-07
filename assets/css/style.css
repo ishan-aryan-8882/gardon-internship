@@ -937,7 +937,8 @@ nav-lower-part button {
   transform: rotateX(-180deg);
   width: 0;
   height: 0;
-  transform:rotateX(10deg) rotateY(-200deg);
+  left: 50%;
+  transform:rotateX(100deg) rotateY(0deg) translateX(-50%);
   transition: all 1s;
 }
 
@@ -946,7 +947,9 @@ nav-lower-part button {
   transform: rotateX(0deg);
   width: 150%;
   height: 100%;
-  transform:rotateX(0deg) rotateY(0deg);
+  left: 0;
+  transform: translateX(0);
+  transform:rotateX(0deg) rotateY(200deg);
   scale: 1.1;
   rotate: 2deg;
 }
