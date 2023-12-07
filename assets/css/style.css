@@ -1598,13 +1598,13 @@ nav-lower-part button {
   transform: translateY(-50px)!important;
 }
 
-@media (max-width:769px){
-  /* .projects{
+@media (max-width:480px){
+  .projects{
     width: 80%!important;
     margin: auto;
-  } */
+  }
 
   .projects .item{
-    margin: 200px 30px!important;
+    width: 80%!important;
   }
 }
