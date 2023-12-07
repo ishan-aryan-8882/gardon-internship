@@ -297,10 +297,37 @@ $(document).ready(function () {
       758: {
         items: 2,
       },
-      0:{
-        items:1,
-      }
+      0: {
+        items: 1,
+      },
     },
   });
+
+  $(".projects").owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: true,
+    autoplay: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 3,
+      },
+      1000: {
+        items: 5,
+      },
+    },
+  });
+
+  $(document).ready(function () {
+    $(".projects .item:even").addClass("even-item");
+  });
+
+  $(document).ready(function () {
+    $(".projects .item:odd").addClass("odd-item");
+  });
+
   // this is the ending parenthesis
 });

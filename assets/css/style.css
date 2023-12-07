@@ -1347,6 +1347,7 @@ nav-lower-part button {
 .page5 {
   width: 100vw;
   margin: 100px 0;
+
 }
 
 .page5-container {
@@ -1543,3 +1544,57 @@ nav-lower-part button {
     align-items: center;
   }
 }
+
+.page6{
+  width: 100vw;
+  height: 100vh;
+}
+
+.page6 .projects-text{
+  display: block;
+  margin-bottom: 50px;
+}
+
+.page6 .projects-text > *{
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.page6 .projects-text img{
+  width: 40px;
+}
+
+.page6 .projects-text span{
+  color: gray;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+}
+
+.page6 .projects-text h2{
+  color: black;
+  font-size: 46px;
+  line-height: 55px;
+  letter-spacing: -1.8px;
+  font-weight: 600;
+}
+
+.projects.owl-carousel{
+  overflow:visible!important;
+}
+
+.projects .item{
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 50px 0;
+}
+
+.projects .item.even-item {
+  transform: translateY(50px)!important;
+}
+.projects .item.odd-item {
+  transform: translateY(-50px)!important;
+}
+
