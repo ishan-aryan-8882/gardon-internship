@@ -271,7 +271,19 @@ $(document).ready(function () {
   $('.services').owlCarousel({
     loop:true,
     margin:10,
-    nav:true,
+    nav:false,
+    dots:false,
     autoplay:true,
+    responsive:{
+      0:{
+        items:1
+      },
+      1200:{
+        items:2
+      },
+      1600:{
+        items:3
+      }
+    }
 })
 });

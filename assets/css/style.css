@@ -846,9 +846,10 @@ nav-lower-part button {
 
 .page3{
   width: 100vw;
-  height: 95vh;
+  height: fit-content;
   background-color: #182818;
   margin: 100px 0;
+  padding: 50px 0;
 }
 
 .page3-contents{
@@ -859,6 +860,7 @@ nav-lower-part button {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  gap: 80px;
 }
 
 .page3-contents .top-part-text{
@@ -892,7 +894,6 @@ nav-lower-part button {
 .services{
   width: 100%!important;
   height: 100%!important;
-  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -960,7 +961,7 @@ nav-lower-part button {
   width: 90px!important;
   height: 90px!important;
   object-fit: contain;
-  position: absolute;
+  position: fixed;
   padding: 7px;
   border-radius: 50%;
   top: 50%;
@@ -972,6 +973,7 @@ nav-lower-part button {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 
 .services .item .log img{
@@ -990,37 +992,8 @@ nav-lower-part button {
   height: 90%!important;
 }
 
-@media (max-width:1631px) {
+@media (max-width:1600px) {
   .page3-contents{
-    width: 90%;
-  }
-}
-
-@media (max-width:1262px) {
-  .page3-contents{
-    width: 100%;
-    padding: 0 10px;
-  }
-  .services{
-    width: 90% !important;
-    margin: auto !important;
-  }
-     .page3-contents .top-part-text {
-      width: 80%;
-      margin: auto;
-  }
-}
-
-
-@media (max-width:1192px) {
-  .services{
-    display: flex;
-    flex-direction: column;
-  }
-  .services .log{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%)!important;
+    width: 80%;
   }
 }
