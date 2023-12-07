@@ -939,7 +939,7 @@ nav-lower-part button {
   width: 0;
   height: 0;
   left: 50%;
-  transform:rotateX(-100deg) rotateY(-100deg) translateX(-50%);
+  transform: rotateX(-100deg) rotateY(-100deg) translateX(-50%);
   transition: all 1s;
 }
 
@@ -950,7 +950,7 @@ nav-lower-part button {
   height: 100%;
   left: 0;
   transform: translateX(0);
-  transform:rotateX(0deg) rotateY(200deg);
+  transform: rotateX(0deg) rotateY(200deg);
   scale: 1.1;
   rotate: 2deg;
 }
@@ -1111,40 +1111,41 @@ nav-lower-part button {
   }
 }
 
-.page4{
+.page4 {
   width: 100vw;
   margin-bottom: 100px;
   padding: 100px 0;
   border: 2px solid;
-  background: url('https://bracketweb.com/gardon-html/main-html/assets/images/shapes/process-one-shape-1.png') no-repeat bottom/contain;
+  background: url("https://bracketweb.com/gardon-html/main-html/assets/images/shapes/process-one-shape-1.png")
+    no-repeat bottom/contain;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  background-color: #EEF3EB;
+  background-color: #eef3eb;
   flex-wrap: wrap;
 }
 
-.page4 .logo-section{
+.page4 .logo-section {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.page4 .logo-section img{
+.page4 .logo-section img {
   width: 40px;
   margin-bottom: 10px;
 }
 
-.page4 .logo-section span{
-  color: rgb(109,117,109);
+.page4 .logo-section span {
+  color: rgb(109, 117, 109);
   font-size: 12px;
   line-height: 12px;
   letter-spacing: 1.2px;
   font-weight: 400;
 }
 
-.page4 h2{
+.page4 h2 {
   font-size: 46px;
   line-height: 55px;
   letter-spacing: -1.84px;
@@ -1154,7 +1155,7 @@ nav-lower-part button {
   margin-bottom: 50px;
 }
 
-.page4 .small-banner{
+.page4 .small-banner {
   display: flex;
   gap: 80px;
   background-color: white;
@@ -1163,38 +1164,56 @@ nav-lower-part button {
   padding: 15px;
 }
 
-.page4 .small-banner p{
-  color: rgb(25,41,25);
+.page4 .small-banner p {
+  color: rgb(25, 41, 25);
   font-size: 18px;
   line-height: 30px;
   font-weight: 400;
 }
 
-.page4 .small-banner button{
+.page4 .small-banner button {
   background-color: RGB(42, 185, 57);
   padding: 4px 40px;
   border: none;
   border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.page4 .small-banner button a{
+.page4 .small-banner button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #1c451f;
+  transform: translateY(-100%);
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.page4 .small-banner button:hover:after {
+  transform: translateY(0%);
+}
+
+.page4 .small-banner button a {
   text-decoration: none;
   color: RGB(255, 255, 255);
   font-size: 12px;
   line-height: 30px;
-  font-weight: 600
+  font-weight: 600;
 }
 
-.circle-contents{
+.circle-contents {
   display: flex;
   width: 80%;
   margin: auto;
   /* border: 2px solid; */
   margin-bottom: 50px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-.four-box-containing-circle{
+.four-box-containing-circle {
   width: 20%;
   padding: 10px;
   /* border: 2px solid; */
@@ -1204,12 +1223,12 @@ nav-lower-part button {
   gap: 20px;
 }
 
-.four-box-containing-circle .circle .inner-circle i{
+.four-box-containing-circle .circle .inner-circle i {
   font-size: 60px;
 }
 
 .four-box-containing-circle .circle .inner-circle {
-  background-color: #F0F4ED;
+  background-color: #f0f4ed;
   padding: 18px 31px;
   border-radius: 50%;
   position: relative;
@@ -1217,48 +1236,94 @@ nav-lower-part button {
   z-index: 1;
 }
 
-.four-box-containing-circle .circle .inner-circle::after{
-  content: '';
+.four-box-containing-circle .circle .inner-circle::after {
+  content: "";
   position: absolute;
   inset: 0;
-  background-color: linear-gradient(90deg,#1C3F1E,#29B037);
+  background: linear-gradient(90deg, #1c3f1e, #29b037);
   z-index: -1;
   width: 0;
   height: 0;
   transition: all 0.5s;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   border-radius: 50%;
 }
 
-.four-box-containing-circle:hover .circle .inner-circle::after{
+.four-box-containing-circle:hover .circle .inner-circle::after {
   width: 100%;
   height: 100%;
 }
 
-.four-box-containing-circle:hover .circle .inner-circle i{
-  color: white;  
+.four-box-containing-circle:hover .circle .inner-circle i {
+  color: white;
 }
 
-.four-box-containing-circle .circle{
+.four-box-containing-circle .circle {
   padding: 15px;
   border: 2px dotted #29b638;
   border-radius: 50%;
-  background-color: #F5F8F3;
+  background-color: #f5f8f3;
 }
 
-.four-box-containing-circle h4{
+.four-box-containing-circle h4 {
   color: RGB(25, 41, 25);
   font-size: 20px;
   letter-spacing: -0.8px;
   line-height: 30px;
   font-weight: 600;
 }
-.four-box-containing-circle p{
+.four-box-containing-circle p {
   color: RGB(109, 117, 109);
   font-size: 15px;
   line-height: 26px;
   font-weight: 400;
   text-align: center;
+}
+
+@media (max-width: 1199px) {
+  .page4 .circle-contents .four-box-containing-circle {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .page4 .circle-contents .four-box-containing-circle {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width:802px){
+  .small-banner{
+    /* border: 2px solid; */
+    width: 80%;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px!important;
+  }
+}
+
+@media (max-width:1550px){
+  .page4 h2{
+    width: 100%;
+  }
+}
+
+@media (max-width:864px){
+  .page4 h2{
+    width: 90%;
+    font-size: 40px;
+  }
+}
+
+@media (max-width:614px){
+  .page4 .small-banner p{
+    text-align: center;
+  }
+
+  .page4 .small-banner button{
+    width: 100%;
+  }
 }
