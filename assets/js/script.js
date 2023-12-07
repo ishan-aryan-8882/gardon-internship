@@ -288,6 +288,5 @@ $(document).ready(function () {
     },
 });
 
-
 // this is the ending parenthesis
 });
