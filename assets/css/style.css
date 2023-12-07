@@ -96,6 +96,17 @@
   z-index: 11;
 }
 
+.hero-carousel .owl-dots .owl-dot span{
+  background-color: white!important;
+  width:20px!important;
+  height:20px!important;
+}
+
+.hero-carousel .owl-dots .owl-dot.active span{
+  background-color: transparent!important;
+  border: 2px solid white!important;
+}
+
 .hero-carousel .owl-nav .owl-prev,
 .hero-carousel .owl-nav .owl-next {
   color: gray !important;
@@ -1458,12 +1469,24 @@ nav-lower-part button {
   transform: translateY(-20px);
 }
 
-.review {
-  /* background: blue; */
-}
-
 .review .owl-dots{
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.review .owl-dots .owl-dot span{
+  background-color: transparent;
+}
+
+.review .owl-dots .owl-dot.active span{
+  background-color: #29b037!important;
+  width: 10px!important;
+  height: 10px!important;
+}
+
+.review .owl-dots .owl-dot.active{
+  border: 2px dotted #29b037;
+  border-radius: 50%;
+  padding: 2px 0.5px!important;
 }
