@@ -262,31 +262,42 @@ $(document).ready(function () {
         }, index * 500);
       });
       animationsTriggered = true;
-      setTimeout(()=>{
-        gardenwomen.css("opacity" , "1")
-      },2000)
+      setTimeout(() => {
+        gardenwomen.css("opacity", "1");
+      }, 2000);
     }
   });
 
-  $('.services').owlCarousel({
-    loop:true,
-    margin:30,
-    dots:false,
-    nav:true,
+  $(".services").owlCarousel({
+    loop: true,
+    margin: 30,
+    dots: false,
+    nav: true,
     navContainer: ".page3-contents",
-    autoplay:true,
-    responsive:{
-      0:{
-        items:1,
+    autoplay: true,
+    responsive: {
+      0: {
+        items: 1,
       },
-      768:{
-        items:2
+      768: {
+        items: 2,
       },
-      1000:{
-        items:3
+      1000: {
+        items: 3,
       },
     },
-});
+  });
 
-// this is the ending parenthesis
+  $(".review").owlCarousel({
+    loop: true,
+    margin: 20,
+    dots: true,
+    autoplay: true,
+    responsive: {
+      0: {
+        items: 2,
+      },
+    },
+  });
+  // this is the ending parenthesis
 });
