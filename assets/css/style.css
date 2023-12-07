@@ -861,6 +861,7 @@ nav-lower-part button {
   flex-direction: column;
   justify-content: space-evenly;
   gap: 80px;
+  position: relative;
 }
 
 .page3-contents .top-part-text{
@@ -955,6 +956,7 @@ nav-lower-part button {
   border: none;
   border-radius: 4px;
   margin: auto;
+  cursor: pointer;
 }
 
 .services .item button i{
@@ -999,8 +1001,61 @@ nav-lower-part button {
   .page3-contents{
     width: 80%;
   }
-<<<<<<< HEAD
 }
-=======
+
+/* .services.owl-carousel .owl-nav button{
+  position: absolute!important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+} */
+
+
+.page3 .owl-prev, .page3 .owl-next{
+  background-color: red;
+  border: none;
+  background-color: transparent;
+  color: #29b638;
+  font-size: 30px;
+  padding: 10px 25px;
+  border: 2px dotted #29b638;
+  position: absolute;
+  z-index: 9;
+  border-radius: 6px;
+  right: 0;
+  top: 10%;
+  transform: translateY(-10%);
 }
->>>>>>> 6e38a3615f13f413fc120f5accb97f09b41d33f4
+
+.page3 .owl-prev{
+  margin-right: 100px;
+}
+
+@media (max-width:927px) {
+  .page3 .owl-prev, .page3 .owl-next{
+    font-size: 20px;
+    padding: 10px 20px;
+    font-weight: 900;
+  }
+  .page3 .owl-prev{
+    margin-right: 60px;
+  }
+  .top-part-text{
+    width: 80%;
+  }
+  .top-part-text h2{
+    font-size: 40px!important;
+  }
+}
+
+@media (max-width:769px) {
+  .page3 .owl-prev, .page3 .owl-next{
+    display: none;
+  }
+  .top-part-text{
+    width: 100%;
+  }
+  .top-part-text h2{
+    font-size: 45px!important;
+  }
+}

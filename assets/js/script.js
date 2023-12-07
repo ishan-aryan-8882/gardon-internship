@@ -270,20 +270,24 @@ $(document).ready(function () {
 
   $('.services').owlCarousel({
     loop:true,
-    margin:10,
-    nav:false,
+    margin:30,
     dots:false,
+    nav:true,
+    navContainer: ".page3-contents",
     autoplay:true,
     responsive:{
       0:{
-        items:1
+        items:1,
       },
-      1200:{
+      768:{
         items:2
       },
-      1600:{
+      1000:{
         items:3
-      }
-    }
-})
+      },
+    },
+});
+
+
+// this is the ending parenthesis
 });
