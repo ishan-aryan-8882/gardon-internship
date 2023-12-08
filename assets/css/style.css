@@ -628,9 +628,9 @@ nav-lower-part button {
 .flexbox1 {
   display: flex;
   width: 90%;
+  margin: auto;
   justify-content: space-between;
-  height: 60%;
-  height: fit-content;
+  align-items: center;
 }
 
 .subflexbox1 {
@@ -793,6 +793,7 @@ nav-lower-part button {
 }
 
 .flexbox2 {
+  width: 80%!important;
   display: flex;
   height: fit-content;
   justify-content: space-evenly;
@@ -801,10 +802,11 @@ nav-lower-part button {
   flex-wrap: wrap;
   padding: 20px 0;
   overflow: hidden;
-  width: 100%;
+  margin: auto;
 }
 
 .green-icon-box {
+  flex:0.2;
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(128, 128, 128, 0.227);
