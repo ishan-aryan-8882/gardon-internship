@@ -307,7 +307,7 @@ $(document).ready(function () {
     loop: true,
     margin: 30,
     nav: false,
-    dots:false,
+    dots: false,
     autoplay: true,
     responsive: {
       0: {
@@ -336,10 +336,12 @@ $(document).ready(function () {
 
     if (windowWidth <= thresholdWidth) {
       // Remove <br> from the h2 element
-      $('.projects-text h2 br').remove();
+      $(".projects-text h2 br").remove();
     } else {
       // Add <br> back to the h2 element
-      $('.page6 .projects-text h2.incredible').html('Enjoy our incredible recently <br> completed projects');
+      $(".page6 .projects-text h2.incredible").html(
+        "Enjoy our incredible recently <br> completed projects"
+      );
     }
   }
   updateBrInH2p6();
@@ -351,10 +353,12 @@ $(document).ready(function () {
 
     if (windowWidth <= thresholdWidth) {
       // Remove <br> from the h2 element
-      $('.page3 .page3-contents .top-part-text h2 br').remove();
+      $(".page3 .page3-contents .top-part-text h2 br").remove();
     } else {
       // Add <br> back to the h2 element
-      $('.page3 .page3-contents .top-part-text h2').html('Services were provding to <br> our customers');
+      $(".page3 .page3-contents .top-part-text h2").html(
+        "Services were provding to <br> our customers"
+      );
     }
   }
   updateBrInH2p3();
@@ -366,38 +370,36 @@ $(document).ready(function () {
 
     if (windowWidth <= thresholdWidth) {
       // Remove <br> from the h2 element
-      $('.page1 #text-container h1 br').remove();
+      $(".page1 #text-container h1 br").remove();
     } else {
       // Add <br> back to the h2 element
-      $('.page1 #text-container h1').html('Make dream <br> gardening');
+      $(".page1 #text-container h1").html("Make dream <br> gardening");
     }
   }
   updateBrInH2p1();
   $(window).resize(updateBrInH2p1);
 
+  $(".gallery-images").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    dots: false,
+    responsive: {
+      0: {
+        items: 1,
+      },
+    },
+  });
 
-
-  $('.gallery-images').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    dots:false,
-    responsive:{
-        0:{
-            items:1
-        },
-    }
-})
-
-let eyeforflipdiv = $('.page6 .projects .item .flip-div .fa-eye');
-let hiddencarousel = $('.page6 .img-gallery');
-let hidehiddencarousel = $('.page6 .img-gallery .gallery-close span');
-eyeforflipdiv.on('click',()=>{
-  hiddencarousel.css("display","flex");
-})
-hidehiddencarousel.on('click',()=>{
-  hiddencarousel.css("display","none");
-})
+  let eyeforflipdiv = $(".page6 .projects .item .flip-div .fa-eye");
+  let hiddencarousel = $(".page6 .img-gallery");
+  let hidehiddencarousel = $(".page6 .img-gallery .gallery-close span");
+  eyeforflipdiv.on("click", () => {
+    hiddencarousel.css("display", "flex");
+  });
+  hidehiddencarousel.on("click", () => {
+    hiddencarousel.css("display", "none");
+  });
 
   // this is the ending parenthesis
 });

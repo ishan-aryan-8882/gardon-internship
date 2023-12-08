@@ -6,10 +6,10 @@
   font-family: "Lexend", sans-serif;
 }
 
-html,
+/* html,
 body {
   overflow-x: hidden !important;
-}
+} */
 
 :root {
   --topnav: #29b638;
@@ -38,7 +38,7 @@ body {
 }
 
 .page1 {
-  width: 100vw;
+  /* width: 100vw; */
   position: relative;
   /* overflow: hidden; */
 }
@@ -509,7 +509,6 @@ nav-lower-part button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
   z-index: 10;
   /* border: 2px solid; */
   width: 75%;
@@ -528,6 +527,7 @@ nav-lower-part button {
   line-height: 24px;
   font-weight: 500;
   margin-bottom: 20px;
+  color: white;
 }
 
 #text-container h1 {
@@ -536,6 +536,7 @@ nav-lower-part button {
   letter-spacing: -3.84px;
   font-weight: 500;
   margin-bottom: 50px;
+  color: white;
 }
 
 #text-container button {
@@ -648,7 +649,7 @@ nav-lower-part button {
 }
 
 .page2 {
-  width: 100vw;
+  /* width: 100vw; */
   height: fit-content;
   margin: 100px 0;
   /* border: 1px solid; */
@@ -999,7 +1000,7 @@ nav-lower-part button {
 }
 
 .page3 {
-  width: 100vw;
+  /* width: 100vw; */
   height: fit-content;
   background-color: #182818;
   margin: 100px 0;
@@ -1020,11 +1021,15 @@ nav-lower-part button {
 }
 
 .page3-contents .top-part-text {
-  color: white;
   display: flex;
   flex-direction: column;
   /* border: 2px solid rgba(255, 255, 255, 0.222); */
   gap: 10px;
+}
+
+
+.page3-contents .top-part-text h2{
+  color: white;
 }
 
 .page3-contents .top-part-text img {
@@ -1286,7 +1291,7 @@ nav-lower-part button {
 }
 
 .page4 {
-  width: 100vw;
+  /* width: 100vw; */
   margin-bottom: 100px;
   padding: 100px 0;
   background: url("https://bracketweb.com/gardon-html/main-html/assets/images/shapes/process-one-shape-1.png")
@@ -1536,7 +1541,7 @@ nav-lower-part button {
 }
 
 .page5 {
-  width: 100vw;
+  /* width: 100vw; */
   margin: 100px 0;
 }
 
@@ -1748,7 +1753,7 @@ nav-lower-part button {
 }
 
 .page6 {
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   position: relative;
   margin-bottom: 100px;
@@ -1983,4 +1988,38 @@ nav-lower-part button {
   .gallery-images .owl-nav .owl-prev span, .gallery-images .owl-nav .owl-next span{
     display: none;
   }
+}
+/* 
+#text-container h4{
+  color: white;
+}
+
+#text-container h1{
+  color: white;
+}
+
+.top-part-text h2{
+  color: white;
+} */
+
+.page7{
+  height: 60vh;
+  margin: 0px 0 100px 0;
+  background:url('https://bracketweb.com/gardon-html/main-html/assets/images/backgrounds/counter-one-bg.jpg') no-repeat center/cover;
+}
+
+.page7 > *{
+  height: 50%;
+  border: 2px solid rgb(164, 209, 27);
+  display: block;
+  width: 70%;
+  margin: auto;
+}
+
+.page7 .one{
+  height: 30%;
+}
+
+.two{
+  height: 70%;
 }
