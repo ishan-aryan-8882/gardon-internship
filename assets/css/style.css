@@ -1376,6 +1376,12 @@ nav-lower-part button {
  .circle-contents{
   width: 100%!important;
  }
+ .four-box-containing-circle h4{
+  line-height: 10px;
+ }
+ .four-box-containing-circle p{
+  line-height: 20px;
+ }
 }
 
 .page5 {
