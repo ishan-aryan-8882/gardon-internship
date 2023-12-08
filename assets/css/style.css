@@ -1750,6 +1750,67 @@ nav-lower-part button {
 .page6 {
   width: 100vw;
   height: 100vh;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.img-gallery{
+  height: 100% !important;
+  position: absolute;
+  inset:0;
+  background-color: rgba(0, 0, 0, 0.712);
+  z-index: 9;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 100px;
+  display: none;
+}
+
+.gallery-close{
+  color: white;
+  text-align: right;
+  padding: 15px 40px 0 0;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.gallery-images .item{
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+
+}
+
+.gallery-images .item img{
+  height: 55vh !important;
+  width: 25vw !important;
+  object-fit: cover !important;
+  border-radius: 6px;
+  box-shadow: 0 0 100px black;
+  margin: 110px;
+
+}
+
+.gallery-images .owl-nav .owl-prev span, .gallery-images .owl-nav .owl-next span{
+  /* background-color: red; */
+  font-size: 50px;
+  padding: 20px;
+  position: absolute;
+}
+
+.gallery-images .owl-nav .owl-prev span{
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gallery-images .owl-nav .owl-next span{
+  right: 0;
+  top: 50%;
+  padding-right: 40px;
+  transform: translateY(-50%);
 }
 
 .page6 .projects-text {
@@ -1835,6 +1896,7 @@ nav-lower-part button {
   border: 5px dotted #29b638;
   padding: 10px;
   transform: translateY(-200%);
+  cursor: pointer;
   transition:color 0.2s , transform 1s;
 }
 
