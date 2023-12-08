@@ -1815,7 +1815,7 @@ nav-lower-part button {
 .gallery-images .owl-nav .owl-next span{
   right: 0;
   top: 50%;
-  padding-right: 40px;
+  /* padding-right: 40px; */
   transform: translateY(-50%);
 }
 
