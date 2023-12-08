@@ -1019,7 +1019,15 @@ nav-lower-part button {
   cursor: pointer;
 }
 
+.services .item button p{
+  transition: all 0.5s;
+}
+
 .services .item button i {
+  color: white;
+}
+
+.services .item button:hover p{
   color: white;
 }
 
@@ -1249,11 +1257,23 @@ nav-lower-part button {
 
 .four-box-containing-circle .circle .inner-circle {
   background-color: #f0f4ed;
-  padding: 18px 31px;
+  padding: 31px;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
   z-index: 1;
+}
+
+.four-box-containing-circle .circle .inner-circle.person {
+  padding: 18px 31px;
+}
+
+.four-box-containing-circle .circle .inner-circle.leaf {
+  padding: 25px 32px;
+}
+
+.four-box-containing-circle .circle .inner-circle.tree {
+  padding: 23px 32px;
 }
 
 .four-box-containing-circle .circle .inner-circle::after {
