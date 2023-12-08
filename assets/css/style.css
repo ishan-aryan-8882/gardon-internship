@@ -1775,11 +1775,15 @@ nav-lower-part button {
 }
 
 .gallery-close{
-  color: white;
   text-align: right;
-  padding: 15px 40px 0 0;
+  padding:  15px 20px;
+}
+
+.gallery-close span{
   font-size: 25px;
   cursor: pointer;
+  color: white;
+  transition: all 0.2s;
 }
 
 .gallery-images .item{
