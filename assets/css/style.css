@@ -1372,6 +1372,13 @@ nav-lower-part button {
   }
 }
 
+@media (max-width:603px) {
+  .page4 h2{
+    line-height: 40px;
+  }
+}
+
+
 @media (max-width:617px){
  .circle-contents{
   width: 100%!important;
