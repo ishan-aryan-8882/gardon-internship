@@ -1307,6 +1307,7 @@ nav-lower-part button {
   background-color: #f5f8f3;
 }
 
+
 .four-box-containing-circle h4 {
   color: RGB(25, 41, 25);
   font-size: 20px;
@@ -1633,4 +1634,24 @@ nav-lower-part button {
   .projects .item{
     width: 80%!important;
   }
+}
+
+@media (max-width:728px) {
+  .projects-text h2{
+      width: 90%;
+      /* border: 2px solid; */
+  }
+}
+
+@media (max-width:678px) {
+  .projects-text h2{
+      font-size: 40px!important;
+}
+}
+
+@media (max-width:407px) {
+  .projects-text h2{
+      font-size: 35px!important;
+      line-height:40px!important;
+}
 }

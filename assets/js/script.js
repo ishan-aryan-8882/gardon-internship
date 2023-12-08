@@ -330,5 +330,24 @@ $(document).ready(function () {
     $(".projects .item:odd").addClass("odd-item");
   });
 
+  function updateBrInH2() {
+    var windowWidth = $(window).width();
+    var thresholdWidth = 678; // Adjust as needed
+
+    if (windowWidth <= thresholdWidth) {
+      // Remove <br> from the h2 element
+      $('.projects-text h2 br').remove();
+    } else {
+      // Add <br> back to the h2 element
+      $('.projects-text h2').html('Enjoy our incredible recently<br> completed projects');
+    }
+  }
+
+  // Initial call to set the initial state based on window width
+  updateBrInH2();
+
+  // Attach the function to the window resize event
+  $(window).resize(updateBrInH2);
+
   // this is the ending parenthesis
 });
