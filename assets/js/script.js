@@ -330,7 +330,7 @@ $(document).ready(function () {
     $(".projects .item:odd").addClass("odd-item");
   });
 
-  function updateBrInH2() {
+  function updateBrInH2p6() {
     var windowWidth = $(window).width();
     var thresholdWidth = 678; // Adjust as needed
 
@@ -339,12 +339,12 @@ $(document).ready(function () {
       $('.projects-text h2 br').remove();
     } else {
       // Add <br> back to the h2 element
-      $('.projects-text h2').html('Enjoy our incredible recently<br> completed projects');
+      $('.page6 .projects-text h2.incredible').html('Enjoy our incredible recently <br> completed projects');
     }
   }
 
-  updateBrInH2();
-  $(window).resize(updateBrInH2);
+  updateBrInH2p6();
+  $(window).resize(updateBrInH2p6);
 
   function updateBrInH2p3() {
     var windowWidth = $(window).width();
@@ -355,7 +355,7 @@ $(document).ready(function () {
       $('.page3 .page3-contents .top-part-text h2 br').remove();
     } else {
       // Add <br> back to the h2 element
-      $('.projects-text h2').html('Services were provding to <br> our customers');
+      $('.page3 .page3-contents .top-part-text h2').html('Services were provding to <br> our customers');
     }
   }
 
@@ -371,14 +371,12 @@ $(document).ready(function () {
       $('.page1 #text-container h1 br').remove();
     } else {
       // Add <br> back to the h2 element
-      $('.projects-text h2').html('Make dream <br> gardening');
+      $('.page1 #text-container h1').html('Make dream <br> gardening');
     }
   }
 
   updateBrInH2p1();
   $(window).resize(updateBrInH2p1);
-
-
 
 
   // this is the ending parenthesis

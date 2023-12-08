@@ -1786,13 +1786,93 @@ nav-lower-part button {
 }
 
 .projects.owl-carousel {
-  overflow: visible !important;
+  /* overflow: visible !important; */
 }
 
 .projects .item {
   border-radius: 6px;
   overflow: hidden;
   margin: 50px 0;
+  position: relative;
+}
+
+.projects .item .flip-div{
+  position: absolute;
+  background-color: #1f2e1dc9;
+  width: 90%;
+  height: 90%;
+  padding: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%)  rotateX(-100deg);
+  opacity: 0;
+  border-radius: 6px;
+  transition: transform 1s ease, opacity 0.2s linear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.projects .item:hover .flip-div{
+  transform: translate(-50%,-50%) rotateX(0deg);
+  opacity: 1;
+}
+
+.projects .item:hover .flip-div i{
+  transform: translateY(0%);
+}
+
+.projects .item:hover .flip-div .flip-div-text{
+  transform: translateY(0%);
+}
+
+.flip-div i{
+  color: #29b638;
+  font-size: 40px;
+  border-radius: 50%;
+  border: 5px dotted #29b638;
+  padding: 10px;
+  transform: translateY(-200%);
+  transition:color 0.2s , transform 1s;
+}
+
+.flip-div i:hover{
+  color: white;
+}
+
+.flip-div-text{
+  transform: translateY(200%);
+  transition:all 1.2s;
+}
+
+.flip-div-text p{
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.96px;
+  font-weight: 600;
+  padding: 0 0 3px;
+  color: rgb(42,185,57);
+  text-align: center;
+  color: white;
+}
+
+.flip-div-text p:not(.upper-gardening){
+  transition: all 0.5s;
+}
+
+.flip-div-text p:not(.upper-gardening):hover {
+  color: rgb(42,185,57);
+}
+
+.flip-div-text p.upper-gardening{
+  color: rgb(42,185,57);
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-align: center !important;
 }
 
 .projects .item.even-item {
@@ -1828,3 +1908,4 @@ nav-lower-part button {
     line-height: 40px !important;
   }
 }
+
