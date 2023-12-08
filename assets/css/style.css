@@ -1772,6 +1772,7 @@ nav-lower-part button {
   justify-content: start;
   gap: 100px;
   display: none;
+  z-index: 99;
 }
 
 .gallery-close{
