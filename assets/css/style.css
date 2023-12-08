@@ -1627,12 +1627,8 @@ nav-lower-part button {
 
 @media (max-width:480px){
   .projects{
-    width: 80%!important;
+    width: 90%!important;
     margin: auto;
-  }
-
-  .projects .item{
-    width: 80%!important;
   }
 }
 
