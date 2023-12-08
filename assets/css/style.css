@@ -161,6 +161,18 @@ body {
   }
 }
 
+@media (max-width:437px) {
+  .page1 #text-container h1{
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .page1 #text-container h4{
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+}
+
 nav {
   position: fixed;
   top: 20px;

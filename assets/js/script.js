@@ -362,5 +362,24 @@ $(document).ready(function () {
   updateBrInH2p3();
   $(window).resize(updateBrInH2p3);
 
+  function updateBrInH2p1() {
+    var windowWidth = $(window).width();
+    var thresholdWidth = 437; // Adjust as needed
+
+    if (windowWidth <= thresholdWidth) {
+      // Remove <br> from the h2 element
+      $('.page1 #text-container h1 br').remove();
+    } else {
+      // Add <br> back to the h2 element
+      $('.projects-text h2').html('Make dream <br> gardening');
+    }
+  }
+
+  updateBrInH2p1();
+  $(window).resize(updateBrInH2p1);
+
+
+
+
   // this is the ending parenthesis
 });
