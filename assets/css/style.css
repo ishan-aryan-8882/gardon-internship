@@ -165,6 +165,7 @@ body {
   .page1 #text-container h1{
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 20px;
   }
   .page1 #text-container h4{
     font-size: 24px;
