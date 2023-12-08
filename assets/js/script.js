@@ -355,7 +355,7 @@ $(document).ready(function () {
       $('.page3 .page3-contents .top-part-text h2 br').remove();
     } else {
       // Add <br> back to the h2 element
-      $('.projects-text h2').html('Enjoy our incredible recently<br> completed projects');
+      $('.projects-text h2').html('Services were provding to <br> our customers');
     }
   }
 
