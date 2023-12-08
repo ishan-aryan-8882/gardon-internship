@@ -1181,6 +1181,7 @@ nav-lower-part button {
   width: 35%;
   text-align: center;
   margin-bottom: 50px;
+  color: RGB(25, 41, 25);
 }
 
 .page4 .small-banner {
@@ -1307,7 +1308,6 @@ nav-lower-part button {
   background-color: #f5f8f3;
 }
 
-
 .four-box-containing-circle h4 {
   color: RGB(25, 41, 25);
   font-size: 20px;
@@ -1325,13 +1325,8 @@ nav-lower-part button {
 
 @media (max-width: 1199px) {
   .page4 .circle-contents .four-box-containing-circle {
-    flex: 0 0 50%;
-  }
-}
-
-@media (max-width: 1199px) {
-  .page4 .circle-contents .four-box-containing-circle {
     flex: 0 0 100%;
+    margin-bottom: 40px;
   }
 }
 
@@ -1367,6 +1362,20 @@ nav-lower-part button {
   .page4 .small-banner button {
     width: 100%;
   }
+}
+
+@media (max-width:699px) {
+  .page4 h2{
+    font-size: 35px;
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media (max-width:617px){
+ .circle-contents{
+  width: 100%!important;
+ }
 }
 
 .page5 {
