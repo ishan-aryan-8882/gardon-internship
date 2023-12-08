@@ -1788,7 +1788,7 @@ nav-lower-part button {
   width: 25vw !important;
   object-fit: cover !important;
   border-radius: 6px;
-  box-shadow: 0 0 100px black;
+  /* box-shadow: 0 0 100px black; */
   margin: 110px;
 
 }
@@ -1844,10 +1844,6 @@ nav-lower-part button {
   line-height: 55px;
   letter-spacing: -1.8px;
   font-weight: 600;
-}
-
-.projects.owl-carousel {
-  /* overflow: visible !important; */
 }
 
 .projects .item {
@@ -1971,3 +1967,19 @@ nav-lower-part button {
   }
 }
 
+@media (max-width:1000px) {
+  .page6 .img-gallery .gallery-images .item img{
+    object-fit: contain !important;
+    scale: 1.2;
+  }
+  .page6 .img-gallery .gallery-images .item{
+    box-shadow:0 0 0 transparent;
+    transform:scale(2);
+  }
+}
+
+@media (max-width:577px){
+  .gallery-images .owl-nav .owl-prev span, .gallery-images .owl-nav .owl-next span{
+    display: none;
+  }
+}
