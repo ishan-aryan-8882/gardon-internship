@@ -947,6 +947,7 @@ nav-lower-part button {
   position: relative;
   overflow: hidden;
   border-radius: 6px;
+  width: 100%;
 }
 
 .services .item-img::after {
@@ -1072,13 +1073,6 @@ nav-lower-part button {
   }
 }
 
-/* .services.owl-carousel .owl-nav button{
-  position: absolute!important;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-} */
-
 .page3 .owl-prev,
 .page3 .owl-next {
   background-color: red;
@@ -1137,6 +1131,23 @@ nav-lower-part button {
   }
   .top-part-text h2 {
     font-size: 45px !important;
+  }
+}
+
+@media(max-width:689px){
+  .top-part-text h2{
+    font-size: 40px!important;
+    /* border: 2px solid; */
+  }
+  .page3-contents {
+    width: 90%;
+  }
+}
+
+@media(max-width:490px){
+  .top-part-text h2{
+    font-size: 30px!important;
+    line-height: 35px !important;
   }
 }
 

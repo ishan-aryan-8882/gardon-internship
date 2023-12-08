@@ -343,11 +343,24 @@ $(document).ready(function () {
     }
   }
 
-  // Initial call to set the initial state based on window width
   updateBrInH2();
-
-  // Attach the function to the window resize event
   $(window).resize(updateBrInH2);
+
+  function updateBrInH2p3() {
+    var windowWidth = $(window).width();
+    var thresholdWidth = 688; // Adjust as needed
+
+    if (windowWidth <= thresholdWidth) {
+      // Remove <br> from the h2 element
+      $('.page3 .page3-contents .top-part-text h2 br').remove();
+    } else {
+      // Add <br> back to the h2 element
+      $('.projects-text h2').html('Enjoy our incredible recently<br> completed projects');
+    }
+  }
+
+  updateBrInH2p3();
+  $(window).resize(updateBrInH2p3);
 
   // this is the ending parenthesis
 });
