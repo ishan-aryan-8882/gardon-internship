@@ -1764,7 +1764,7 @@ nav-lower-part button {
   height: 200% !important;
   position: absolute;
   inset:0;
-  background-color: rgba(0, 0, 0, 0.712);
+  /* background-color: rgba(0, 0, 0, 0.712); */
   z-index: 9;
   color: white;
   display: flex;
@@ -1783,7 +1783,7 @@ nav-lower-part button {
 .gallery-close span{
   font-size: 25px;
   cursor: pointer;
-  color: white;
+  color: rgb(0, 0, 0);
   transition: all 0.2s;
 }
 

@@ -399,13 +399,13 @@ $(document).ready(function () {
   });
   hidehiddencarousel.on("click", () => {
     hiddencarousel.css("display", "none");
-    $('.page1, .page2, .page3, .page4, .page5, .page6, .page7').css('opacity', '1');
+    $('.page1, .page2, .page3, .page4, .page5, .page6, .page7, .projects, .projects-text ').css('opacity', '1');
   });
 
   $(document).ready(function() {
     $('.fa-eye').on('click', function() {
       // Reduce the opacity of all pages
-      $('.page1, .page2, .page3, .page4, .page5, .page6, .page7').css('opacity', '0.1');
+      $('.page1, .page2, .page3, .page4, .page5, .page6, .page7, .projects, .projects-text').css('opacity', '0.1');
       $('.page6').css('opacity', '1');
     });
   });
