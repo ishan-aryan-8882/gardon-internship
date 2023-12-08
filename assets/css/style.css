@@ -1269,11 +1269,11 @@ nav-lower-part button {
 }
 
 .four-box-containing-circle .circle .inner-circle.leaf {
-  padding: 25px 32px;
+  padding: 28px 32px;
 }
 
 .four-box-containing-circle .circle .inner-circle.tree {
-  padding: 23px 32px;
+  padding: 25px 32px;
 }
 
 .four-box-containing-circle .circle .inner-circle::after {
