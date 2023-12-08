@@ -1809,6 +1809,7 @@ nav-lower-part button {
   font-size: 50px;
   padding: 20px;
   position: absolute;
+  color: black;
 }
 
 .gallery-images .owl-nav .owl-prev span{
