@@ -1752,10 +1752,11 @@ nav-lower-part button {
   height: 100vh;
   position: relative;
   margin-bottom: 100px;
+  overflow: hidden;
 }
 
 .img-gallery{
-  height: 100% !important;
+  height: 200% !important;
   position: absolute;
   inset:0;
   background-color: rgba(0, 0, 0, 0.712);
