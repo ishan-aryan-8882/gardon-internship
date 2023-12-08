@@ -1558,15 +1558,26 @@ nav-lower-part button {
 }
 @media (max-width: 748px) {
   .page5-container .feedback p {
-    width: 100% !important;
+    width: 98% !important;
     text-align: center;
+    font-size: 16px;
+    text-align: justify;
   }
   .page5-container .feedback h2 {
+    font-size: 40px;
     width: 100% !important;
-    text-align: center;
+    text-align: justify;
   }
   .page5-container .feedback{
     align-items: center;
+    padding: 0;
+  }
+}
+
+@media (max-width:618px) {
+  .page5-container .feedback h2 {
+    font-size: 35px;
+    line-height: 45px;
   }
 }
 
