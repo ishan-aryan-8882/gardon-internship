@@ -2261,7 +2261,7 @@ nav-lower-part button {
 }
 
 .page8 button {
-  width: fit-content;
+  width: fit-content !important;
   font-size: 16px;
   color: white;
   line-height: 30px;
@@ -2306,5 +2306,32 @@ nav-lower-part button {
 }
 
 @media (max-width:1272px){
-  
+  .page8{
+    padding-right: 10px;
+  }
+  .page8 h4{
+    font-size: 28px;
+  }
+}
+
+@media (max-width:1150px) {
+  .page8 h4{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .page8 button{
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-95%,-50%);
+    width: 150px !important;
+  }
+}
+
+@media (max-width:1000px) {
+img.small-dissapear{
+  display: none;
+}
 }
