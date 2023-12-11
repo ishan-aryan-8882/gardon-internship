@@ -2199,7 +2199,7 @@ nav-lower-part button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 100px;
+  padding-right: 50px;
 }
 
 .page8::after {
@@ -2261,7 +2261,6 @@ nav-lower-part button {
 }
 
 .page8 button {
-  width: fit-content !important;
   font-size: 16px;
   color: white;
   line-height: 30px;
@@ -2274,6 +2273,7 @@ nav-lower-part button {
   overflow: hidden;
   transition: all 0.6s ease-in-out;
   z-index: 1;
+  width: fit-content !important;
 }
 .page8 button::after {
   content: "";
@@ -2293,45 +2293,102 @@ nav-lower-part button {
   color: RGB(25, 41, 25);
 }
 
-@media (max-width:1400px) {
-  .page8 .page8-img .image-child-second{
+@media (max-width: 1400px) {
+  .page8 .page8-img .image-child-second {
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     margin: auto 0;
   }
-  .page8{
+  .page8 {
     padding-right: 50px;
   }
 }
 
-@media (max-width:1272px){
-  .page8{
+@media (max-width: 1272px) {
+  .page8 {
     padding-right: 10px;
   }
-  .page8 h4{
+  .page8 h4 {
     font-size: 28px;
   }
 }
 
-@media (max-width:1150px) {
-  .page8 h4{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+@media (max-width: 1150px) {
+  .page8 {
+    width: 90%;
   }
-  .page8 button{
+  .page8 h4 {
     position: absolute;
     top: 50%;
-    left: 95%;
-    transform: translate(-95%,-50%);
-    width: 150px !important;
+    left: 45%;
+    transform: translate(-45%, -50%);
+  }
+  .page8 button {
+    position: absolute;
+    top: 50%;
+    left: 96%;
+    transform: translate(-96%, -50%);
+    font-size: 14px;
+    width: 210px !important;
   }
 }
 
-@media (max-width:1000px) {
-img.small-dissapear{
-  display: none;
+@media (max-width: 951px) {
+  .page8 button {
+    position: absolute;
+    top: 50%;
+    left: 98%;
+    transform: translate(-98%, -50%);
+    font-size: 14px;
+    width: 210px !important;
+  }
 }
+
+@media (max-width: 900px) {
+  .page8 {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  .page8::after{
+    position: absolute;
+    content: "";
+    /* inset:0; */
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    right: 0px;
+    background: url("https://bracketweb.com/gardon-html/main-html/assets/images/shapes/cta-one-shape-1.png")
+      no-repeat center/cover;
+    z-index: -1;
+    filter: opacity(0.4);
+    scale: 1;
+    animation: leafmove 4s linear infinite;
+  }
+  .page8 > * {
+    position: static !important;
+    /* border: 2px solid; */
+  }
+  .page8 button {
+    display: inline-block;
+    transform: translateX(0%)
+  }
+  .page8 h4 {
+    display: block;
+    width: 100%;
+    transform: translateX(0);
+    text-align: center;
+  }
+  .small-dis{
+    opacity: 0;
+  }
+  .page8-img{
+    position: relative;
+    display: none;
+  }
 }
