@@ -2011,12 +2011,12 @@ nav-lower-part button {
   position: relative;
 }
 
-.page7::after{
-  content: '';
+.page7::after {
+  content: "";
   position: absolute;
   inset: 0;
   background: url("https://bracketweb.com/gardon-html/main-html/assets/images/backgrounds/counter-one-bg.jpg")
-  no-repeat center/cover;
+    no-repeat center/cover;
   z-index: -1;
   filter: brightness(50%) blur(1px);
 }
@@ -2053,7 +2053,7 @@ nav-lower-part button {
   object-fit: cover;
 }
 
-.two-left{
+.two-left {
   /* background-color: blue; */
   width: 42%;
   display: flex;
@@ -2062,12 +2062,12 @@ nav-lower-part button {
   gap: 10px;
 }
 
-.two-left img{
+.two-left img {
   width: 40px;
   margin-bottom: 10px;
 }
 
-.page7 .two-left span{
+.page7 .two-left span {
   color: white;
   font-size: 12px;
   line-height: 12px;
@@ -2075,7 +2075,7 @@ nav-lower-part button {
   font-weight: 400;
 }
 
-.page7 .two-left h2{
+.page7 .two-left h2 {
   color: white;
   font-size: 46px;
   line-height: 55px;
@@ -2084,7 +2084,7 @@ nav-lower-part button {
   font-weight: 600;
 }
 
-.two-right{
+.two-right {
   width: 50%;
   display: flex;
   justify-content: space-around;
@@ -2092,7 +2092,7 @@ nav-lower-part button {
   /* background-color: red; */
 }
 
-.four-white-boxes .white-bg{
+.four-white-boxes .white-bg {
   background-color: white;
   display: flex;
   justify-content: center;
@@ -2104,17 +2104,17 @@ nav-lower-part button {
   border-radius: 6px;
 }
 
-.four-white-boxes .white-bg i{
+.four-white-boxes .white-bg i {
   font-size: 40px;
   color: #29b037;
   transition: all 0.2s linear;
 }
 
-.four-white-boxes .white-bg:hover i{
+.four-white-boxes .white-bg:hover i {
   font-size: 35px;
 }
 
-.four-white-boxes{
+.four-white-boxes {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2124,89 +2124,144 @@ nav-lower-part button {
   /* border: 2px solid; */
 }
 
-.four-white-boxes h3{
+.four-white-boxes h3 {
   color: white;
   font-size: 36px;
   line-height: 36px;
   font-weight: 500;
 }
 
-.four-white-boxes p{
+.four-white-boxes p {
   color: white;
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
 }
 
-@media (max-width:1602px) {
-  .two{
+@media (max-width: 1602px) {
+  .two {
     width: 95%;
   }
-  .two-left h2{
+  .two-left h2 {
     font-size: 35px;
     line-height: 35px;
     letter-spacing: -1.4px;
   }
 }
 
-@media (max-width:1200px){
-  .two{
+@media (max-width: 1200px) {
+  .two {
     flex-direction: column;
     padding: 20px 0;
     width: 80%;
     margin: auto;
     gap: 50px;
   }
-  .two-right,.two-left{
+  .two-right,
+  .two-left {
     width: 100%;
   }
-  .two-right{
+  .two-right {
     justify-content: space-between;
   }
 }
 
-@media (max-width:768px){
+@media (max-width: 768px) {
   .two-right {
     flex-direction: column;
     gap: 50px;
   }
-  .four-white-boxes{
+  .four-white-boxes {
     gap: 8px;
   }
-  .two-left h2{
+  .two-left h2 {
     font-size: 30px !important;
     line-height: 40px !important;
     text-align: center;
   }
-  .two-left img{
+  .two-left img {
     margin: auto;
   }
 
-  .two-left span{
+  .two-left span {
     margin: auto;
   }
 }
 
-.page8{
+.page8 {
   width: 80%;
   margin: auto;
   margin-bottom: 100px;
-  background-color: #2AB939;
+  background-color: #2ab939;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 100px;
 }
 
-.page8 > *{
+.page8::after {
+  position: absolute;
+  content: "";
+  /* inset:0; */
+  width: 100%;
+  height: 100%;
+  bottom: 90px;
+  right: -340px;
+  background: url("https://bracketweb.com/gardon-html/main-html/assets/images/shapes/cta-one-shape-1.png")
+    no-repeat bottom/contain;
+  z-index: -1;
+  filter: opacity(0.4);
+  scale: 3;
+  animation: leafmove 4s linear infinite;
+}
+
+@keyframes leafmove {
+  0%,
+  100% {
+    transform: translateY(8px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+.page8 > * {
   display: inline-block;
+  vertical-align: middle;
 }
 
-.page8 h4{
+.page8-img {
+  position: relative;
+}
+
+.page8 img {
+  border-top-right-radius: 120px;
+  border-bottom-right-radius: 120px;
+}
+
+.page8 img.image-child-second {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  width: 60px;
+}
+
+.page8 h4 {
   color: white;
   font-size: 30px;
   letter-spacing: -1.2px;
   font-weight: 600;
-  margin: auto;
 }
 
-.page8 button{
+.page8 button {
+  width: fit-content;
   font-size: 16px;
   color: white;
   line-height: 30px;
@@ -2214,5 +2269,42 @@ nav-lower-part button {
   font-weight: 500;
   background-color: RGB(25, 41, 25);
   border: none;
-  margin: auto;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  z-index: 1;
+}
+.page8 button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  transform: translateY(-100%);
+  transition: all 0.6s ease-in-out;
+  z-index: -1;
+}
+
+.page8 button:hover:after {
+  transform: translateY(0%);
+}
+
+.page8 button:hover {
+  color: RGB(25, 41, 25);
+}
+
+@media (max-width:1400px) {
+  .page8 .page8-img .image-child-second{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: auto 0;
+  }
+  .page8{
+    padding-right: 50px;
+  }
+}
+
+@media (max-width:1272px){
+  
 }
