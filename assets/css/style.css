@@ -2392,3 +2392,15 @@ nav-lower-part button {
     display: none;
   }
 }
+
+@media (max-width:1729px) {
+  .one .slide-cont img{
+    width: 200px !important;
+  }
+}
+
+@media (max-width:1160px) {
+  .one .slide-cont img{
+    width: 200px !important;
+  }
+}
