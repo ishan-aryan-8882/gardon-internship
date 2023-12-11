@@ -309,6 +309,7 @@ $(document).ready(function () {
     nav: false,
     dots: false,
     autoplay: true,
+    // autoplayTimeout: 2000,
     responsive: {
       0: {
         items: 1,
@@ -384,6 +385,8 @@ $(document).ready(function () {
     margin: 10,
     nav: true,
     dots: false,
+    autoplay:true,
+    // autoplayTimeout: 2000,
     responsive: {
       0: {
         items: 1,
@@ -409,6 +412,8 @@ $(document).ready(function () {
       $('.page6').css('opacity', '1');
     });
   });
+
+  $("#page-seven-slider").twentytwenty();
 
   // this is the ending parenthesis
 });
