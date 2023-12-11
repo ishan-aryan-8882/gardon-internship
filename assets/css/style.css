@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Lexend", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* html,
@@ -2355,7 +2356,7 @@ nav-lower-part button {
     gap: 20px;
     padding: 20px;
   }
-  .page8::after{
+  .page8::after {
     position: absolute;
     content: "";
     /* inset:0; */
@@ -2376,7 +2377,7 @@ nav-lower-part button {
   }
   .page8 button {
     display: inline-block;
-    transform: translateX(0%)
+    transform: translateX(0%);
   }
   .page8 h4 {
     display: block;
@@ -2384,23 +2385,176 @@ nav-lower-part button {
     transform: translateX(0);
     text-align: center;
   }
-  .small-dis{
+  .small-dis {
     opacity: 0;
   }
-  .page8-img{
+  .page8-img {
     position: relative;
     display: none;
   }
 }
 
-@media (max-width:1729px) {
-  .one .slide-cont img{
+@media (max-width: 1729px) {
+  .one .slide-cont img {
     width: 200px !important;
   }
 }
 
-@media (max-width:1160px) {
-  .one .slide-cont img{
+@media (max-width: 1160px) {
+  .one .slide-cont img {
     width: 200px !important;
   }
+}
+
+.page9 {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.page9-cont {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-landscapers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-landscapers img {
+  width: 40px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.intro-landscapers span {
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+  color: gray;
+  margin-bottom: 20px;
+}
+.intro-landscapers h2 {
+  color: black;
+  font-size: 46px;
+  line-height: 55px;
+  letter-spacing: -1.84px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
+
+.photos-landscapers {
+  width: 75%;
+  /* border: 2px solid; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.page9 .proffesion-cont p {
+  color: gray;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+  z-index: 9;
+}
+
+.page9 .proffesion-cont a {
+  color: white;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: -0.8px;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 9;
+  margin-bottom: 20px;
+}
+
+.person-three-box {
+  border-radius: 10px;
+  position: relative;
+  width: fit-content;
+  width: 30%;
+  overflow: hidden;
+  background-color: red;
+}
+
+img.people {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.proffesion-cont {
+  position: absolute;
+  bottom: 0;
+  padding: 30px 20px 60px 20px;
+  z-index: 10;
+  background: #192919;
+  width: 100%;
+}
+
+img.grassland {
+  position: absolute;
+  bottom: -23px;
+  right: 0;
+  filter: saturate(0) opacity(0.3);
+  transition: all 0.5s;
+  z-index: 10;
+}
+
+.person-three-box:hover img.grassland {
+  filter: saturate(100) opacity(0.4);
+}
+
+.person-three-box::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: #19291964;
+  transform: translateY(-100%);
+  transition: all 0.5s;
+  z-index: 9;
+}
+
+.person-three-box:hover img.people {
+  scale: 1.04;
+}
+.person-three-box:hover:before {
+  transform: translateY(0%);
+}
+
+img.share{
+  position: absolute;
+  right: 10%;
+  top: 80%;
+  transform: translateX(-10%) translateY(-80%);
+  z-index: 10;
+}
+
+.vertical-show{
+  position: absolute;
+  right: 13%;
+  top: 61%;
+  transform: translateX(-13%) translateY(-61%);
+  z-index: 99;
+  background-color: #29b638;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 6px;
+  color: white;
+  padding: 10px;
+  padding: 0;
+  opacity: 0;
+  transition: all 0.5s ;
+}
+
+.person-three-box:hover .vertical-show{
+  padding: 10px;
+  opacity: 1;
+  z-index: 10;
 }
