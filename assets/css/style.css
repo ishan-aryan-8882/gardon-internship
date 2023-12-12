@@ -3027,12 +3027,6 @@ input#email-id,select{
 
 @media (max-width:401px){
   .page12-bottom-image-part{
-    width: 90%;
-    align-items: center;
-    padding-right: 100px;
-  }
-  .news-section{
-    scale: 0.9;
-    margin: auto;
+    width: 100%;
   }
 }
