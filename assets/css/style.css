@@ -2949,7 +2949,7 @@ input#email-id,select{
   color: gray;
 }
 
-.img-outer-abs-text__hover.stl{
+.img-outer-abs-text__hover{
   position: absolute;
   bottom: -200px;
   transform: rotateX(-90deg);
@@ -2972,16 +2972,16 @@ input#email-id,select{
   font-weight: 500;
 }
 
-.img-outer-abs-text.stl:hover .img-outer-abs-text__hover.stl{
-  transform: rotateX(0deg);
+.img-outer-abs-text:hover .img-outer-abs-text__hover{
+  transform: rotateX(90deg);
   opacity: 1;
 }
 
-.img-outer-abs-text.stl{
+.img-outer-abs-text{
   transition: all 0.5s;
 }
 
-.img-outer-abs-text.stl:hover {
+.img-outer-abs-text:hover {
   transform: rotateX(-90deg);
   opacity: 0;
 }
