@@ -415,5 +415,38 @@ $(document).ready(function () {
 
   $("#page-seven-slider").twentytwenty();
 
+
+  function updateBrInH2p10() {
+    var windowWidth = $(window).width();
+    var thresholdWidth = 700; // Adjust as needed
+
+    if (windowWidth < thresholdWidth) {
+      // Remove <br> from the h2 element
+      $(".page10 .contact-text h2 br").remove();
+    } else {
+      // Add <br> back to the h2 element
+      $(".page10 .contact-text h2 ").html("Get a free estimate for <br>your garden");
+    }
+  }
+  updateBrInH2p10();
+  $(window).resize(updateBrInH2p10);
+
+
+
+  function updateBrInPp10() {
+    var windowWidth = $(window).width();
+    var thresholdWidth = 700; // Adjust as needed
+
+    if (windowWidth < thresholdWidth) {
+      // Remove <br> from the h2 element
+      $(".page10 .contact-text p br").remove();
+    } else {
+      // Add <br> back to the h2 element
+      $(".page10 .contact-text p ").html("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua.");
+    }
+  }
+  updateBrInPp10();
+  $(window).resize(updateBrInPp10);
+
   // this is the ending parenthesis
 });
