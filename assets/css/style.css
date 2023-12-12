@@ -2599,7 +2599,7 @@ img.share {
 
 .page10 {
   margin: 100px 0;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   position: relative;
   overflow: hidden;
 }
