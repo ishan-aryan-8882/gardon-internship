@@ -448,5 +448,28 @@ $(document).ready(function () {
   updateBrInPp10();
   $(window).resize(updateBrInPp10);
 
+
+  $('.page11-cont').owlCarousel({
+    loop:true,
+    margin:100,
+    nav:false,
+    dots:false,
+    autoplay:true,
+    responsive:{
+        0:{
+            items:2
+        },
+        575:{
+            items:3
+        },
+        756:{
+          items:4
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+
   // this is the ending parenthesis
 });
