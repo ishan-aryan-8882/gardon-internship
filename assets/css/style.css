@@ -3021,12 +3021,35 @@ input#email-id,select{
     flex-direction: column;
   }
   .news-section{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 
 @media (max-width:401px){
   .page12-bottom-image-part{
     width: 100%;
+  }
+  .news-section{
+    width: 80%;
+  }
+
+  .img-outer-abs-text{
+    position: absolute;
+    bottom: -350px;
+    display: flex;  
+    flex-direction: column;
+  }
+
+  .img-outer{
+    position: relative;
+    padding: 5px;
+    margin-bottom:350px;
+    /* border: 1px solid; */
+  }
+
+  .img-outer-abs-text__hover{
+    position: absolute;
+    bottom: -250px;
+    transition: all 1s;
   }
 }
