@@ -2866,7 +2866,7 @@ input#email-id,select{
   width: 70%;
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center; */
+  justify-content: space-between;
 }
 
 .news-section{

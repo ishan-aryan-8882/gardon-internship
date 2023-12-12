@@ -385,7 +385,7 @@ $(document).ready(function () {
     margin: 10,
     nav: true,
     dots: false,
-    autoplay:true,
+    autoplay: true,
     // autoplayTimeout: 2000,
     responsive: {
       0: {
@@ -402,19 +402,22 @@ $(document).ready(function () {
   });
   hidehiddencarousel.on("click", () => {
     hiddencarousel.css("display", "none");
-    $('.page1, .page2, .page3, .page4, .page5, .page6, .page7, .projects, .projects-text ').css('opacity', '1');
+    $(
+      ".page1, .page2, .page3, .page4, .page5, .page6, .page7, .projects, .projects-text "
+    ).css("opacity", "1");
   });
 
-  $(document).ready(function() {
-    $('.fa-eye').on('click', function() {
+  $(document).ready(function () {
+    $(".fa-eye").on("click", function () {
       // Reduce the opacity of all pages
-      $('.page1, .page2, .page3, .page4, .page5, .page6, .page7, .projects, .projects-text').css('opacity', '0.1');
-      $('.page6').css('opacity', '1');
+      $(
+        ".page1, .page2, .page3, .page4, .page5, .page6, .page7, .projects, .projects-text"
+      ).css("opacity", "0.1");
+      $(".page6").css("opacity", "1");
     });
   });
 
   $("#page-seven-slider").twentytwenty();
-
 
   function updateBrInH2p10() {
     var windowWidth = $(window).width();
@@ -425,13 +428,13 @@ $(document).ready(function () {
       $(".page10 .contact-text h2 br").remove();
     } else {
       // Add <br> back to the h2 element
-      $(".page10 .contact-text h2 ").html("Get a free estimate for <br>your garden");
+      $(".page10 .contact-text h2 ").html(
+        "Get a free estimate for <br>your garden"
+      );
     }
   }
   updateBrInH2p10();
   $(window).resize(updateBrInH2p10);
-
-
 
   function updateBrInPp10() {
     var windowWidth = $(window).width();
@@ -442,50 +445,51 @@ $(document).ready(function () {
       $(".page10 .contact-text p br").remove();
     } else {
       // Add <br> back to the h2 element
-      $(".page10 .contact-text p ").html("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua.");
+      $(".page10 .contact-text p ").html(
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua."
+      );
     }
   }
   updateBrInPp10();
   $(window).resize(updateBrInPp10);
 
+  $(".page11-cont").owlCarousel({
+    loop: true,
+    margin: 120,
+    nav: false,
+    dots: false,
+    autoplay: true,
+    responsive: {
+      0: {
+        items: 2,
+      },
+      575: {
+        items: 3,
+      },
+      756: {
+        items: 4,
+      },
+      1000: {
+        items: 5,
+      },
+    },
+  });
 
-  $('.page11-cont').owlCarousel({
-    loop:true,
-    margin:120,
-    nav:false,
-    dots:false,
-    autoplay:true,
-    responsive:{
-        0:{
-            items:2
-        },
-        575:{
-            items:3
-        },
-        756:{
-          items:4,
-        },
-        1000:{
-            items:5
-        }
-    }
-});
+  function handleHover(classPrefix) {
+    $(`.img-inner.${classPrefix}`).mouseover(() => {
+      $(`.img-outer-abs-text__hover.${classPrefix}`).removeClass("displaynone");
+      $(`.img-outer-abs-text.${classPrefix}`).addClass("displaynone");
+    });
 
-  $('.img-inner').mouseover(()=>{
-    $('.img-outer-abs-text__hover').removeClass('displaynone')
-  })
-
-  $('.img-inner').mouseleave(()=>{
-    $('.img-outer-abs-text__hover').addClass('displaynone')
-  })
-
-  $('.img-inner').mouseover(()=>{
-    $('.img-outer-abs-text').addClass('displaynone')
-  })
-
-  $('.img-inner').mouseleave(()=>{
-    $('.img-outer-abs-text').removeClass('displaynone')
-  })
+    $(`.img-inner.${classPrefix}`).mouseleave(() => {
+      $(`.img-outer-abs-text__hover.${classPrefix}`).addClass("displaynone");
+      $(`.img-outer-abs-text.${classPrefix}`).removeClass("displaynone");
+    });
+  }
+  
+  handleHover("uno");
+  handleHover("dos");
+  handleHover("tres");
 
   // this is the ending parenthesis
 });
