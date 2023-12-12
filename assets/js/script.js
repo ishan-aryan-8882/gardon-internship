@@ -469,7 +469,23 @@ $(document).ready(function () {
             items:5
         }
     }
-})
+});
+
+  $('.img-inner').mouseover(()=>{
+    $('.img-outer-abs-text__hover').removeClass('displaynone')
+  })
+
+  $('.img-inner').mouseleave(()=>{
+    $('.img-outer-abs-text__hover').addClass('displaynone')
+  })
+
+  $('.img-inner').mouseover(()=>{
+    $('.img-outer-abs-text').addClass('displaynone')
+  })
+
+  $('.img-inner').mouseleave(()=>{
+    $('.img-outer-abs-text').removeClass('displaynone')
+  })
 
   // this is the ending parenthesis
 });
