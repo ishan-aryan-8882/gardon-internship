@@ -2582,3 +2582,17 @@ img.share {
     padding: 10px 10px;
   }
 }
+
+@media (max-width:560px) {
+  .intro-landscapers h2{
+    font-size: 40px;
+    line-height: 45px;
+  }
+}
+
+@media (max-width:462px) {
+  .intro-landscapers h2{
+    font-size: 32px;
+    line-height: 35px;
+  }
+}
