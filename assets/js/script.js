@@ -451,7 +451,7 @@ $(document).ready(function () {
 
   $('.page11-cont').owlCarousel({
     loop:true,
-    margin:100,
+    margin:120,
     nav:false,
     dots:false,
     autoplay:true,
@@ -463,7 +463,7 @@ $(document).ready(function () {
             items:3
         },
         756:{
-          items:4
+          items:4,
         },
         1000:{
             items:5
