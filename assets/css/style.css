@@ -1750,7 +1750,7 @@ nav-lower-part button {
 }
 
 .img-gallery {
-  height: 50% !important;
+  height: 100vh !important;
   position: absolute;
   inset: 0;
   z-index: 9;
@@ -1782,7 +1782,7 @@ nav-lower-part button {
 }
 
 .gallery-images .item img {
-  /* height: 55vh !important; */
+  height: 55vh !important;
   width: 25vw !important;
   object-fit: cover !important;
 }
