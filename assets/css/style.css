@@ -2984,6 +2984,7 @@ select {
   position: absolute;
   bottom: -200px;
   transition: all 1s;
+  transform-origin:bottom;
 }
 
 .img-outer-abs-text__hover button {
@@ -3003,11 +3004,10 @@ select {
 }
 
 .img-outer-abs-text {
-  transition: all 0.3s;
+  transition: all 0.8s;
 }
 
 .displayblock {
-  display: block;
   transform: rotateX(0deg);
 }
 
