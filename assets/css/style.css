@@ -1745,10 +1745,8 @@ nav-lower-part button {
 }
 
 .page6 {
-  /* width: 100vw; */
   height: 100vh;
   position: relative;
-  /* margin-bottom: 100px; */
   overflow: hidden;
 }
 
@@ -1756,13 +1754,11 @@ nav-lower-part button {
   height: 100% !important;
   position: absolute;
   inset: 0;
-  /* background-color: rgba(0, 0, 0, 0.712); */
   z-index: 9;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: start;
-  /* gap: 100px; */
   display: none;
   z-index: 99;
 }
@@ -1852,7 +1848,7 @@ nav-lower-part button {
 .projects .item {
   border-radius: 6px;
   overflow: hidden;
-  margin: 50px 0;
+  /* margin: 50px 0; */
   position: relative;
 }
 
@@ -1977,11 +1973,9 @@ nav-lower-part button {
   .projects .item.even-item {
     transform: translateY(0px) !important;
   }
-  .projects .item{
-    border: 2px solid white;
-  }
-  .projects{
-    background: red;
+  .projects .item img{
+    /* border: 2px solid rgb(214, 36, 36); */
+    border-radius: 6px !important;
   }
   .flip-div-text p{
     font-size: 28px;
@@ -1990,9 +1984,6 @@ nav-lower-part button {
   .flip-div-text p.upper-gardening{
     font-size: 25px;
     line-height: 30px;
-  }
-  .flip-div-text i{
-    font-size: 50px;
   }
 }
 
