@@ -491,5 +491,29 @@ $(document).ready(function () {
   handleHover("dos");
   handleHover("tres");
 
+
+
+
+  updateBrInAp12();
+  $(window).resize(updateBrInAp12);
+
+  function updateBrInAp12() {
+    var windowWidth = $(window).width();
+    var thresholdWidth = 380; // Adjust as needed
+
+    if (windowWidth < thresholdWidth) {
+      // Remove <br> from the h2 element
+      $(".page12 .stl .full-white a br").remove();
+    } else {
+      // Add <br> back to the h2 element
+      $(".page10 .contact-text p ").html(
+        "Best ways to light up <br> your garden walkways"
+      );
+    }
+  }
+  updateBrInAp12();
+  $(window).resize(updateBrInAp12);
+
+
   // this is the ending parenthesis
 });

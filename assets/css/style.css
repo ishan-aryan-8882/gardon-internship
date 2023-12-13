@@ -2597,7 +2597,7 @@ img.share {
   /* border: 2px solid; */
 }
 
-.top-part-contact{
+.top-part-contact {
   position: relative;
   display: flex;
   justify-content: end;
@@ -2607,15 +2607,16 @@ img.share {
   overflow: hidden;
 }
 
-.top-part-contact::after{
+.top-part-contact::after {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   top: -150px;
   width: 100%;
   height: 100%;
   /* border: 2px solid; */
-  background: url('https://bracketweb.com/gardon-html/main-html/assets/images/shapes/contact-one-shape-4.png') no-repeat;
+  background: url("https://bracketweb.com/gardon-html/main-html/assets/images/shapes/contact-one-shape-4.png")
+    no-repeat;
   background-position: right;
   background-size: contain;
   filter: saturate(0%);
@@ -2624,29 +2625,30 @@ img.share {
 }
 
 @keyframes contactleaf {
-  0%,100%{
+  0%,
+  100% {
     transform: translateY(0px);
   }
-  50%{
+  50% {
     transform: translateY(-10px);
   }
 }
 
-.contact-text{
+.contact-text {
   width: 45%;
   display: flex;
   flex-direction: column;
-  gap: 10px ;
+  gap: 10px;
   align-items: start;
   /* border: 2px solid; */
 }
 
-.contact-text img{
+.contact-text img {
   margin-top: 20px;
   width: 40px;
 }
 
-.contact-text span{
+.contact-text span {
   color: gray;
   font-size: 12px;
   margin-top: 55px;
@@ -2656,7 +2658,7 @@ img.share {
   margin-bottom: 25px;
 }
 
-.contact-text h2{
+.contact-text h2 {
   color: #192919;
   font-size: 46px;
   line-height: 55px;
@@ -2665,7 +2667,7 @@ img.share {
   margin-bottom: 20px;
 }
 
-.contact-text p{
+.contact-text p {
   font-size: 15px;
   color: gray;
   line-height: 30px;
@@ -2673,7 +2675,7 @@ img.share {
   margin-bottom: 20px;
 }
 
-.input-forms{
+.input-forms {
   width: 80%;
   /* background: red; */
   display: flex;
@@ -2683,22 +2685,25 @@ img.share {
   z-index: 9;
 }
 
-input#full-name,input#phone-no{
+input#full-name,
+input#phone-no {
   width: 48%;
   margin-bottom: 15px;
 }
 
-input#address{
+input#address {
   width: 100%;
   margin-bottom: 20px;
 }
 
-input#email-id,select{
+input#email-id,
+select {
   width: 48%;
 }
 
-.input-forms input, select{
-  color: rgb(109,117,109);
+.input-forms input,
+select {
+  color: rgb(109, 117, 109);
   outline: none;
   border: none;
   font-size: 13px;
@@ -2709,23 +2714,23 @@ input#email-id,select{
   border-radius: 6px;
 }
 
-.input-forms select option{
+.input-forms select option {
   font-size: 13px;
   line-height: 30px;
   background: #000;
-  background: rgb(42,185,57);
+  background: rgb(42, 185, 57);
   color: white;
   transition: all 0.4s;
   font-weight: 600;
 }
 
-.input-forms option:hover{
+.input-forms option:hover {
   background-color: #192919;
 }
 
-.contact-text button{
+.contact-text button {
   color: white;
-  background: rgb(42,185,57);
+  background: rgb(42, 185, 57);
   font-size: 16px;
   line-height: 30px;
   padding: 15px 50px;
@@ -2738,8 +2743,8 @@ input#email-id,select{
   overflow: hidden;
 }
 
-.contact-text button::after{
-  content: '';
+.contact-text button::after {
+  content: "";
   position: absolute;
   inset: 0;
   background-color: #192919;
@@ -2748,102 +2753,104 @@ input#email-id,select{
   transition: all 0.8s;
 }
 
-.contact-text button:hover:after{
+.contact-text button:hover:after {
   transform: translateY(-0%);
 }
 
-@media (max-width:1200px) {
-  .page10 img.contact-back-image-to-go{
+@media (max-width: 1200px) {
+  .page10 img.contact-back-image-to-go {
     display: none;
   }
-  .contact-text{
+  .contact-text {
     width: 95%;
   }
-  .page10{
-    background-color: #E9EFE5;
+  .page10 {
+    background-color: #e9efe5;
   }
-  .input-forms input, .input-forms select{
+  .input-forms input,
+  .input-forms select {
     background-color: white;
   }
-  .input-forms{
+  .input-forms {
     width: 80%;
   }
-  .top-part-contact::after{
+  .top-part-contact::after {
     display: none;
   }
 }
 
-@media (max-width:800px) {
-  .input-forms{
+@media (max-width: 800px) {
+  .input-forms {
     width: 95%;
   }
-  .input-forms input, .input-forms select{
+  .input-forms input,
+  .input-forms select {
     width: 100% !important;
   }
-  .input-forms select{
+  .input-forms select {
     margin-top: 20px;
   }
 }
 
-@media (max-width:700px) {
-  .contact-text h2{
+@media (max-width: 700px) {
+  .contact-text h2 {
     font-size: 30px;
     line-height: 34px;
     padding: 0 14px 0 0;
   }
-  .contact-text p{
+  .contact-text p {
     font-size: 13px;
     line-height: 25px;
     padding: 0 14px 0 0;
   }
 }
 
-.page11{
+.page11 {
   padding: 90px 0;
   margin-bottom: 100px;
-  border-bottom: 4px dotted rgba(128, 128, 128, 0.301) ;
+  border-bottom: 4px dotted rgba(128, 128, 128, 0.301);
   width: 70vw;
   margin: 0 auto 100px auto;
 }
 
-.page11 .page11-cont{
+.page11 .page11-cont {
   display: flex;
   justify-content: space-between;
 }
 
-.page11 .page11-cont img{
-  filter:opacity(0.3) ;
+.page11 .page11-cont img {
+  filter: opacity(0.3);
   transition: all 0.5s;
 }
 
-.page11 .page11-cont img:hover{
-  filter:opacity(1) ;
+.page11 .page11-cont img:hover {
+  filter: opacity(1);
 }
 
-.page12{
+.page12 {
   position: relative;
   margin-bottom: 100px;
 }
 
-.page12-contents{
+.page12-contents {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
 
-.page12-top-text-part{
+.page12-top-text-part {
   display: flex;
   flex-direction: column;
-  gap: 20px ;
+  gap: 20px;
   align-items: center;
 }
 
-.page12-top-text-part img{
+.page12-top-text-part img {
   width: 40px;
 }
 
-.page12-top-text-part span{
+.page12-top-text-part span {
   font-size: 12px;
   line-height: 12px;
   letter-spacing: 1.2px;
@@ -2851,7 +2858,7 @@ input#email-id,select{
   color: gray;
 }
 
-.page12-top-text-part h2{
+.page12-top-text-part h2 {
   color: black;
   font-size: 46px;
   line-height: 55px;
@@ -2859,7 +2866,7 @@ input#email-id,select{
   font-weight: 600;
   text-align: center;
 }
-.page12-bottom-image-part{
+.page12-bottom-image-part {
   padding: 10px;
   /* background: rgb(245, 199, 199); */
   margin: auto;
@@ -2870,33 +2877,36 @@ input#email-id,select{
   align-items: center;
 }
 
-.news-section{
+.news-section {
   /* border: 1px solid; */
   border-radius: 6px;
   position: relative;
 }
 
-.img-outer{
+.img-outer {
   position: relative;
-  padding: 5px;
-  margin-bottom:260px;
+  padding: 0px;
+  margin-bottom: 260px;
   /* border: 1px solid; */
 }
 
-.img-inner{
+.img-inner {
   position: relative;
   overflow: hidden;
   /* border: 1px solid; */
   border-radius: 6px;
+  padding: 0px;
 }
 
-.img-inner img{
+.img-inner img {
   border-radius: 6px;
+  width: 100%;
+  height: 100%;
 }
 
-.img-inner::after{
+.img-inner::after {
   position: absolute;
-  content: '+';
+  content: "+";
   inset: 0;
   display: flex;
   justify-content: center;
@@ -2910,32 +2920,32 @@ input#email-id,select{
   transition: all 0.5s;
 }
 
-.img-inner:hover:after{
+.img-inner:hover:after {
   transform: translateY(0%);
 }
 
-.img-outer-abs-text{
+.img-outer-abs-text {
   position: absolute;
   bottom: -260px;
-  display: flex;  
+  display: flex;
   flex-direction: column;
 }
 
-.stl .half-green{
+.stl .half-green {
   width: fit-content;
   border-top-right-radius: 6px;
-  background: #2AB939;
+  background: #2ab939;
   padding: 8px 40px;
   color: white;
   font-size: 12px;
   line-height: 22px;
 }
 
-.stl .full-white{
+.stl .full-white {
   width: fit-content;
   border-radius: 6px;
   border-top-left-radius: 0px;
-  background: #FFFFFF;
+  background: #ffffff;
   padding: 18px 50px 68px 40px;
   display: flex;
   flex-direction: column;
@@ -2943,18 +2953,18 @@ input#email-id,select{
   box-shadow: 0 0 50px rgba(128, 128, 128, 0.23);
 }
 
-.full-white .first-sec{
+.full-white .first-sec {
   font-size: 15px;
   color: gray;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-.full-white .first-sec i{
+.full-white .first-sec i {
   color: var(--topnav);
 }
 
-.full-white a{
+.full-white a {
   font-size: 22px;
   line-height: 26px;
   letter-spacing: -0.8px;
@@ -2964,19 +2974,19 @@ input#email-id,select{
   margin-bottom: 10px;
 }
 
-.full-white p{
+.full-white p {
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
   color: gray;
 }
-.img-outer-abs-text__hover{
+.img-outer-abs-text__hover {
   position: absolute;
   bottom: -200px;
   transition: all 1s;
 }
 
-.img-outer-abs-text__hover button{
+.img-outer-abs-text__hover button {
   background: #192919;
   color: white;
   width: 100%;
@@ -2992,64 +3002,41 @@ input#email-id,select{
   border: none;
 }
 
-.img-outer-abs-text{
+.img-outer-abs-text {
   transition: all 0.3s;
 }
 
-.displayblock{
+.displayblock {
   display: block;
   transform: rotateX(0deg);
 }
 
-.displaynone{
+.displaynone {
   transform: rotateX(90deg);
 }
 
-@media (max-width:1662px){
-  .page12-bottom-image-part{
-    width: 90%;
-  }
-}
-@media (max-width:1300px){
+@media (max-width:1666px) {
   .page12-bottom-image-part{
     width: 100%;
+    padding: 0px;
+    justify-content: space-around;
   }
 }
 
-@media (max-width:1200px){
+@media (max-width:1200px) {
   .page12-bottom-image-part{
-    flex-direction: column;
+    width: 50%;
   }
   .news-section{
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 }
 
-@media (max-width:401px){
+@media (max-width:752px){
   .page12-bottom-image-part{
     width: 100%;
   }
   .news-section{
-    width: 80%;
-  }
-
-  .img-outer-abs-text{
-    position: absolute;
-    bottom: -350px;
-    display: flex;  
-    flex-direction: column;
-  }
-
-  .img-outer{
-    position: relative;
-    padding: 5px;
-    margin-bottom:350px;
-    /* border: 1px solid; */
-  }
-
-  .img-outer-abs-text__hover{
-    position: absolute;
-    bottom: -250px;
-    transition: all 1s;
+    margin: 0 20px 50px 20px;
   }
 }
