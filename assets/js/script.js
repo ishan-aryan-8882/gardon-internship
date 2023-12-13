@@ -528,14 +528,36 @@ $(document).ready(function () {
     var stlWidth = $('.img-outer-abs-text__hover').width();
     $('.img-outer-abs-text__hover button').width(stlWidth-80);
   }
-
-  // Set initial width on page load
   setHoverWidth();
-
-  // Update width on window resize
   $(window).resize(function() {
     setHoverWidth();
   });
+
+
+  function setSliderWidth() {
+    var sliderwidth = $('.slide-cont').height();
+    $('.page7').css('marginTop',sliderwidth);
+  }
+  setSliderWidth();
+  $(window).resize(function() {
+    setSliderWidth();
+  });
+
+  // function updateBrInPp06() {
+  //   var windowWidth = $(window).width();
+  //   var thresholdWidth = 800;
+  
+  //   if (windowWidth < thresholdWidth) {
+  //     $(".page6 .flip-div-text p:not(.upper-gardening) br").remove();
+  //   } else {
+  //     $(".page6 .flip-div-text p:not(.upper-gardening)").html(
+  //       "Lawn and garden <br> maintenance"
+  //     );
+  //   }
+  // }
+  
+  // updateBrInPp06();
+  // $(window).resize(updateBrInPp06);
 
   // this is the ending parenthesis
 });
