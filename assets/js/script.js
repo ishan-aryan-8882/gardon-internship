@@ -486,16 +486,10 @@ $(document).ready(function () {
       $(`.img-outer-abs-text.${classPrefix}`).removeClass("displaynone");
     });
   }
-  
+
   handleHover("uno");
   handleHover("dos");
   handleHover("tres");
-
-
-
-
-  updateBrInAp12();
-  $(window).resize(updateBrInAp12);
 
   function updateBrInAp12() {
     var windowWidth = $(window).width();
@@ -506,7 +500,7 @@ $(document).ready(function () {
       $(".page12 .stl .full-white a br").remove();
     } else {
       // Add <br> back to the h2 element
-      $(".page10 .contact-text p ").html(
+      $(".page12 .stl .full-white a ").html(
         "Best ways to light up <br> your garden walkways"
       );
     }
@@ -514,6 +508,21 @@ $(document).ready(function () {
   updateBrInAp12();
   $(window).resize(updateBrInAp12);
 
+  function updateBrInPp12() {
+    var windowWidth = $(window).width();
+    var thresholdWidth = 382;
+
+    if (windowWidth <= thresholdWidth) {
+      $(".page12 .stl .full-white p br").remove();
+    } else {
+      $(".page12 .stl .full-white p").html(
+        "Lorem ipsum dolor sit amet consect <br>etru adi piscing elit"
+      );
+    }
+  }
+
+  updateBrInPp12();
+  $(window).resize(updateBrInPp12);
 
   // this is the ending parenthesis
 });
