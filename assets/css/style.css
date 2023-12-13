@@ -1745,13 +1745,12 @@ nav-lower-part button {
 }
 
 .page6 {
-  height: 100vh;
   position: relative;
   overflow: hidden;
 }
 
 .img-gallery {
-  height: 100% !important;
+  height: 50% !important;
   position: absolute;
   inset: 0;
   z-index: 9;
@@ -1783,11 +1782,9 @@ nav-lower-part button {
 }
 
 .gallery-images .item img {
-  height: 55vh !important;
+  /* height: 55vh !important; */
   width: 25vw !important;
   object-fit: cover !important;
-  /* box-shadow: 0 0 100px black; */
-  /* margin: 110px; */
 }
 
 .gallery-images .owl-nav .owl-prev span,

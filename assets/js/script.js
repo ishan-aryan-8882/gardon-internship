@@ -416,7 +416,7 @@ $(document).ready(function () {
       // Reduce the opacity of all pages
       $(
         ".page1, .page2, .page3, .page4, .page5, .page6, .page7, .projects, .projects-text"
-      ).css("opacity", "0.1");
+      ).css("opacity", "0");
       $(".page6").css("opacity", "1");
     });
   });
