@@ -1756,9 +1756,8 @@ nav-lower-part button {
   inset: 0;
   z-index: 9;
   color: white;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
-  justify-content: start;
   display: none;
   z-index: 99;
 }
@@ -1779,15 +1778,16 @@ nav-lower-part button {
   /* background-color: red; */
   display: flex;
   justify-content: center;
+  border-radius: 6px !important;
+  overflow: hidden;
 }
 
 .gallery-images .item img {
   height: 55vh !important;
   width: 25vw !important;
   object-fit: cover !important;
-  border-radius: 6px;
   /* box-shadow: 0 0 100px black; */
-  margin: 110px;
+  /* margin: 110px; */
 }
 
 .gallery-images .owl-nav .owl-prev span,
@@ -3527,4 +3527,8 @@ footer {
   padding: 10px 12px;
   font-size: 20px;
   background-color: rgba(255, 255, 255, 0.205);
+}
+
+.no-scroll{
+  overflow: hidden;
 }

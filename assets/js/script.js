@@ -30,10 +30,12 @@ $(document).ready(function () {
 
   burgerMenu.on("click", function () {
     sideMenu.toggleClass("small-nav-show-right");
+    $('body').addClass('no-scroll');
   });
 
   cross.on("click", function () {
     sideMenu.removeClass("small-nav-show-right");
+    $('body').removeClass('no-scroll');
   });
 
   let cursor = $(".circular-div");
@@ -399,12 +401,14 @@ $(document).ready(function () {
   let hidehiddencarousel = $(".page6 .img-gallery .gallery-close span");
   eyeforflipdiv.on("click", () => {
     hiddencarousel.css("display", "flex");
+    $('body').addClass('no-scroll');
   });
   hidehiddencarousel.on("click", () => {
     hiddencarousel.css("display", "none");
     $(
       ".page1, .page2, .page3, .page4, .page5, .page6, .page7, .projects, .projects-text "
     ).css("opacity", "1");
+    $('body').removeClass('no-scroll');
   });
 
   $(document).ready(function () {
