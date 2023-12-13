@@ -1848,7 +1848,7 @@ nav-lower-part button {
 .projects .item {
   border-radius: 6px;
   overflow: hidden;
-  /* margin: 50px 0; */
+  margin: 50px 0;
   position: relative;
 }
 
@@ -1984,6 +1984,12 @@ nav-lower-part button {
   .flip-div-text p.upper-gardening{
     font-size: 25px;
     line-height: 30px;
+  }
+  .projects .item {
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
   }
 }
 
