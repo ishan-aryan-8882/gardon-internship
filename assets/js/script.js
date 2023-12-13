@@ -520,9 +520,22 @@ $(document).ready(function () {
       );
     }
   }
-
   updateBrInPp12();
   $(window).resize(updateBrInPp12);
+
+
+  function setHoverWidth() {
+    var stlWidth = $('.img-outer-abs-text__hover').width();
+    $('.img-outer-abs-text__hover button').width(stlWidth-80);
+  }
+
+  // Set initial width on page load
+  setHoverWidth();
+
+  // Update width on window resize
+  $(window).resize(function() {
+    setHoverWidth();
+  });
 
   // this is the ending parenthesis
 });

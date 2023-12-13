@@ -3046,18 +3046,18 @@ select {
     width: 100%;
     padding: 0 !important;
   }
-  /* .stl .full-white{
-    padding: 10px 20px;
-    padding-bottom: 60px;
-  } */
   .stl{
     padding-right: 20px;
+  }
+
+  .img-outer-abs-text__hover button{
+    width: 94%;
   }
 }
 
 @media (max-width:404px){
   .stl .full-white{
-    padding-top: 0px;
+    /* padding-top: 0px; */
     padding-left: 15px;
   }
 }
@@ -3095,5 +3095,12 @@ select {
   }
   .full-white p{
     font-size: 14px;
+  }
+}
+
+@media (max-width:465px) {
+  .page12-top-text-part h2{
+    font-size: 10vw;
+    line-height: 12vw;
   }
 }
