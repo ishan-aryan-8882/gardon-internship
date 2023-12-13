@@ -3104,3 +3104,31 @@ select {
     line-height: 12vw;
   }
 }
+
+footer{
+  position: relative;
+  margin: 100px 0;
+}
+.footer-top-part{
+  padding: 93px 0 111px 0;
+  background: #1A2A1A;
+}
+
+.footer-bottom-part{
+  background: #2AB939;
+}
+
+.footer-bottom-part .copyright-section{
+  padding: 28px 0;
+  padding-bottom: 45px;
+}
+
+.footer-bottom-part .copyright-section p{
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.footer-bottom-part img{
+  background-color: #1A2A1A;
+}
