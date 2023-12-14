@@ -30,12 +30,12 @@ $(document).ready(function () {
 
   burgerMenu.on("click", function () {
     sideMenu.toggleClass("small-nav-show-right");
-    $('body').addClass('no-scroll');
+    $("body").addClass("no-scroll");
   });
 
   cross.on("click", function () {
     sideMenu.removeClass("small-nav-show-right");
-    $('body').removeClass('no-scroll');
+    $("body").removeClass("no-scroll");
   });
 
   let cursor = $(".circular-div");
@@ -421,15 +421,6 @@ $(document).ready(function () {
   //   });
   // });
 
-
-  const lightbox = GLightbox({
-    touchNavigation: true,
-    loop: true,
-    width: "90vw",
-    height: "90vh"
-  });
-  
-
   function updateBrInH2p10() {
     var windowWidth = $(window).width();
     var thresholdWidth = 700; // Adjust as needed
@@ -534,41 +525,45 @@ $(document).ready(function () {
   updateBrInPp12();
   $(window).resize(updateBrInPp12);
 
-
   function setHoverWidth() {
-    var stlWidth = $('.img-outer-abs-text__hover').width();
-    $('.img-outer-abs-text__hover button').width(stlWidth-80);
+    var stlWidth = $(".img-outer-abs-text__hover").width();
+    $(".img-outer-abs-text__hover button").width(stlWidth - 80);
   }
   setHoverWidth();
-  $(window).resize(function() {
+  $(window).resize(function () {
     setHoverWidth();
   });
 
-
   function setSliderWidth() {
-    var sliderwidth = $('.slide-cont').height();
-    $('.page7').css('marginTop',sliderwidth);
+    var sliderwidth = $(".slide-cont").height();
+    $(".page7").css("marginTop", sliderwidth);
   }
   setSliderWidth();
-  $(window).resize(function() {
+  $(window).resize(function () {
     setSliderWidth();
   });
 
-  // function updateBrInPp06() {
-  //   var windowWidth = $(window).width();
-  //   var thresholdWidth = 800;
-  
-  //   if (windowWidth < thresholdWidth) {
-  //     $(".page6 .flip-div-text p:not(.upper-gardening) br").remove();
-  //   } else {
-  //     $(".page6 .flip-div-text p:not(.upper-gardening)").html(
-  //       "Lawn and garden <br> maintenance"
-  //     );
-  //   }
-  // }
-  
-  // updateBrInPp06();
-  // $(window).resize(updateBrInPp06);
+  lightbox.option({
+    touchNavigation: true,
+    loop: true,
+    width: "90vw",
+    height: "90vh",
+  });
+
+  // Manually trigger Lightbox on .fa-solid .fa-eye click
+  $(".fa-solid.fa-eye").on("click", function () {
+    var lightboxGroup = $(this).data("lightbox");
+    var $lightboxAnchor = $(this).closest(".item").find("a");
+
+    console.log("Lightbox Group:", lightboxGroup);
+    console.log("Lightbox Anchor:", $lightboxAnchor);
+
+    if ($lightboxAnchor.length > 0) {
+      lightbox.start($lightboxAnchor[0]);
+    } else {
+      console.error("Lightbox Anchor not found.");
+    }
+  });
 
   // this is the ending parenthesis
 });
