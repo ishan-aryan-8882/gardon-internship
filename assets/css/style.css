@@ -1750,20 +1750,24 @@ nav-lower-part button {
 }
 
 .img-gallery {
-  height: 100vh !important;
   position: absolute;
-  inset: 0;
+  /* inset: 0; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   z-index: 9;
-  color: white;
-  /* display: flex; */
-  flex-direction: column;
   display: none;
   z-index: 99;
 }
 
 .gallery-close {
-  text-align: right;
-  padding: 15px 20px;
+  /* text-align: right;
+  padding: 15px 20px; */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 999;
 }
 
 .gallery-close span {

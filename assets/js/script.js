@@ -396,32 +396,39 @@ $(document).ready(function () {
     },
   });
 
-  let eyeforflipdiv = $(".page6 .projects .item .flip-div .fa-eye");
-  let hiddencarousel = $(".page6 .img-gallery");
-  let hidehiddencarousel = $(".page6 .img-gallery .gallery-close span");
-  eyeforflipdiv.on("click", () => {
-    hiddencarousel.css("display", "flex");
-    // $('body').addClass('no-scroll');
-  });
-  hidehiddencarousel.on("click", () => {
-    hiddencarousel.css("display", "none");
-    $(
-      ".page1, .page2, .page3, .page4, .page5, .page6, .page7, .projects, .projects-text "
-    ).css("opacity", "1");
-    // $('body').removeClass('no-scroll');
-  });
+  // let eyeforflipdiv = $(".page6 .projects .item .flip-div .fa-eye");
+  // let hiddencarousel = $(".page6 .img-gallery");
+  // let hidehiddencarousel = $(".page6 .img-gallery .gallery-close span");
+  // eyeforflipdiv.on("click", () => {
+  //   hiddencarousel.css("display", "flex");
+  //   // $('body').addClass('no-scroll');
+  // });
+  // hidehiddencarousel.on("click", () => {
+  //   hiddencarousel.css("display", "none");
+  //   $(
+  //     ".page1, .page2, .page3, .page4, .page5, .page6, .page7, .projects, .projects-text "
+  //   ).css("opacity", "1");
+  //   // $('body').removeClass('no-scroll');
+  // });
 
-  $(document).ready(function () {
-    $(".fa-eye").on("click", function () {
-      // Reduce the opacity of all pages
-      $(
-        ".page1, .page2, .page3, .page4, .page5, .page6, .page7, .projects, .projects-text"
-      ).css("opacity", "0");
-      $(".page6").css("opacity", "1");
-    });
-  });
+  // $(document).ready(function () {
+  //   $(".fa-eye").on("click", function () {
+  //     // Reduce the opacity of all pages
+  //     $(
+  //       ".page1, .page2, .page3, .page4, .page5, .page6, .page7, .projects, .projects-text"
+  //     ).css("opacity", "0");
+  //     $(".page6").css("opacity", "1");
+  //   });
+  // });
 
-  $("#page-seven-slider").twentytwenty();
+
+  const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true,
+    width: "90vw",
+    height: "90vh"
+  });
+  
 
   function updateBrInH2p10() {
     var windowWidth = $(window).width();
