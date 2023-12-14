@@ -549,21 +549,22 @@ $(document).ready(function () {
     width: "90vw",
     height: "90vh",
   });
-
+  
   // Manually trigger Lightbox on .fa-solid .fa-eye click
-  $(".fa-solid.fa-eye").on("click", function () {
-    var lightboxGroup = $(this).data("lightbox");
+  $(".page6 .fa-solid.fa-eye").on("click", function () {
+    var lightboxGroup = $(this).data("lightbox-group");  // Corrected attribute name
     var $lightboxAnchor = $(this).closest(".item").find("a");
-
+  
     console.log("Lightbox Group:", lightboxGroup);
     console.log("Lightbox Anchor:", $lightboxAnchor);
-
+  
     if ($lightboxAnchor.length > 0) {
       lightbox.start($lightboxAnchor[0]);
     } else {
       console.error("Lightbox Anchor not found.");
     }
   });
+  
 
   // this is the ending parenthesis
 });
