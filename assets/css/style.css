@@ -266,6 +266,13 @@ nav-lower-part img {
 #nav-lmid-part a {
   text-decoration: none;
   color: gray;
+  transition: all 0.3s;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+#nav-lmid-part a:hover{
+  color: black;
 }
 
 nav-lower-part .fa-grip-lines,
@@ -3534,3 +3541,8 @@ footer {
 .no-scroll{
   overflow: hidden;
 }
+
+.active{
+  color: black !important;
+}
+
