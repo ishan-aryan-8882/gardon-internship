@@ -508,5 +508,35 @@ $(document).ready(function () {
   $(window).resize(function () {
     setSliderWidth();
   });
+
+  function updateBrInAppp2() {
+    var windowWidth = $(window).width();
+    var thresholdWidth = 1201;
+    if (windowWidth < thresholdWidth) {
+      $(".page2.about-page p.gray-lorem br").remove();
+    } else {
+      $(".page2.about-page p.gray-lorem").html(
+        "Lorem ipsum dolor sit am adipi we help you ensure everyone is in <br>the right jobs sicing elit, sed do consulting firms Et leggings across <br>the nation tempor."
+      );
+    }
+  }
+  updateBrInAppp2();
+  $(window).resize(updateBrInAppp2);
+
+
+  function updateBrInAph1p2() {
+    var windowWidth = $(window).width();
+    var thresholdWidth = 769;
+    if (windowWidth < thresholdWidth) {
+      $(".page2.about-page h1 br").remove();
+    } else {
+      $(".page2.about-page h1").html(
+        "Providing the quality <br> gardening services"
+      );
+    }
+  }
+  updateBrInAph1p2();
+  $(window).resize(updateBrInAph1p2);
+
   // this is the ending parenthesis
 });
