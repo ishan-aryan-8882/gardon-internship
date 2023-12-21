@@ -26,12 +26,10 @@ $(document).ready(function () {
   let burgerMenu = $(".fa-grip-lines");
   let sideMenu = $(".nav-show-on-small-screen");
   let cross = $(".closing-cross");
-
   burgerMenu.on("click", function () {
     sideMenu.toggleClass("small-nav-show-right");
     $("body").toggleClass("no-scroll");
   });
-
   cross.on("click", function () {
     sideMenu.removeClass("small-nav-show-right");
     $("body").removeClass("no-scroll");
@@ -209,11 +207,13 @@ $(document).ready(function () {
     }, 400);
   });
 
+  // nav on pages
+  // home page
   $(window).on("scroll", function () {
     let page1 = $(".page1");
-    let nav = $("nav");
+    let nav = $(".page1 nav");
     let rect1 = page1[0].getBoundingClientRect();
-
+    
     if (rect1.top <= -70) {
       gsap.to(nav, {
         top: -50,
@@ -228,6 +228,26 @@ $(document).ready(function () {
       });
     }
   });
+  // about page
+  $(window).on("scroll", function () {
+    let aboutsection1 = $(".about-hero-section");
+    let aboutnav = $(".about-hero-section nav");
+    let rectabout = aboutsection1[0].getBoundingClientRect();
+
+    if (rectabout.top <= -70) {
+        gsap.to(aboutnav, {
+            top: -50,
+            duration: 0.3,
+            ease: "power4.inOut",
+        });
+    } else {
+        gsap.to(aboutnav, {
+            top: 20,
+            duration: 0.3,
+            ease: "power4.inOut",
+        });
+    }
+});
 
   let animationsTriggered = false;
   $(window).on("scroll", function () {
@@ -508,28 +528,5 @@ $(document).ready(function () {
   $(window).resize(function () {
     setSliderWidth();
   });
-
-  // lightbox.option({
-  //   touchNavigation: true,
-  //   loop: true,
-  //   width: "90vw",
-  //   height: "90vh",
-  // });
-
-  // // Manually trigger Lightbox on .fa-solid .fa-eye click
-  // $(".page6 .fa-solid.fa-eye").on("click", function () {
-  //   var lightboxGroup = $(this).data("lightbox-group");  // Corrected attribute name
-  //   var $lightboxAnchor = $(this).closest(".item").find("a");
-
-  //   console.log("Lightbox Group:", lightboxGroup);
-  //   console.log("Lightbox Anchor:", $lightboxAnchor);
-
-  //   if ($lightboxAnchor.length > 0) {
-  //     lightbox.start($lightboxAnchor[0]);
-  //   } else {
-  //     console.error("Lightbox Anchor not found.");
-  //   }
-  // });
-
   // this is the ending parenthesis
 });

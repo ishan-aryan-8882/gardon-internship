@@ -271,7 +271,7 @@ nav-lower-part img {
   font-size: 18px;
 }
 
-#nav-lmid-part a:hover{
+#nav-lmid-part a:hover {
   color: black;
 }
 
@@ -414,8 +414,8 @@ nav-lower-part button {
   background-color: var(--sidenav);
   display: flex;
   flex-direction: column;
-  height: 95vh;
-  width: fit-content;
+  height: 100%;
+  width: 50%;
   align-items: start;
   justify-content: space-evenly;
   position: absolute;
@@ -491,9 +491,11 @@ nav-lower-part button {
 }
 
 .icons-coll-small {
-  width: 70%;
+  width: 98%;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 20px;
 }
 
 .icons-coll-small i {
@@ -1762,7 +1764,7 @@ nav-lower-part button {
   /* inset: 0; */
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 9;
   display: none;
   z-index: 99;
@@ -1975,22 +1977,22 @@ nav-lower-part button {
   }
 }
 
-@media (max-width:481px){
+@media (max-width: 481px) {
   .projects .item.odd-item {
     transform: translateY(0px) !important;
   }
   .projects .item.even-item {
     transform: translateY(0px) !important;
   }
-  .projects .item img{
+  .projects .item img {
     /* border: 2px solid rgb(214, 36, 36); */
     border-radius: 6px !important;
   }
-  .flip-div-text p{
+  .flip-div-text p {
     font-size: 28px;
     line-height: 40px;
   }
-  .flip-div-text p.upper-gardening{
+  .flip-div-text p.upper-gardening {
     font-size: 25px;
     line-height: 30px;
   }
@@ -3538,11 +3540,114 @@ footer {
   background-color: rgba(255, 255, 255, 0.205);
 }
 
-.no-scroll{
+.no-scroll {
   overflow: hidden;
 }
 
-.active{
+.active {
   color: black !important;
 }
 
+#nav-lmid-part li {
+  list-style: none;
+}
+
+#nav-lmid-part li.for-hidden-service {
+  position: relative;
+}
+
+#nav-lmid-part li.for-hidden-service:hover ul.services-hidden-menu {
+  transform: rotateX(0deg);
+  opacity: 1;
+  transition: all 1.1s, opacity 0.4s;
+}
+
+ul.services-hidden-menu li:hover {
+  background: #EAF0E6;
+}
+
+ul.services-hidden-menu li:hover i{
+  scale: 1;
+}
+
+ul.services-hidden-menu {
+  position: absolute;
+  top: 100%;
+  top: 55px;
+  left: 0;
+  background: rgb(255, 255, 255);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transform-origin: top;
+  transform: rotateX(90deg);
+  overflow: hidden;
+  transition: all 0.4s;
+  padding:30px 20px 10px 20px;
+  opacity: 0;
+}
+
+ul.services-hidden-menu li {
+  text-align: left !important;
+  margin-bottom: 5px;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+ul.services-hidden-menu li a {
+  font-size: 16px !important;
+  color:gray !important;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  width: 250px;
+  transition: all 0.2s;
+  font-weight: 500 !important;
+  padding: 5px;
+  font-weight: 400 !important;
+}
+
+ul.services-hidden-menu li i{
+  color: var(--topnav);
+  scale: 0;
+  transition: all 0.5s;
+}
+
+.page1.about-page{
+  /* border: 2px solid; */
+}
+
+.hero-img-about{
+  width: 100%;
+  height: 100%;
+  min-height: 58vh !important;
+  filter: brightness(60%);
+  object-fit: cover;
+}
+
+.about-home-return{
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  width: 75%;
+  margin: auto;
+  transform: translateX(-50%) translateY(-65%);
+  padding: 20px 40px;
+  /* background: red; */
+}
+
+.about-home-return > *{
+  color: white;
+}
+
+.about-home-return h1{
+  margin-bottom: 10px;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.about-home-return a, .about-home-return p{
+  display: inline-block;
+}
