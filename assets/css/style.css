@@ -3623,18 +3623,16 @@ ul.services-hidden-menu li i{
   width: 100%;
   height: 100%;
   min-height: 58vh !important;
-  filter: brightness(60%);
+  filter: brightness(60%) saturate(85%);
   object-fit: cover;
 }
 
 .about-home-return{
   position: absolute;
   top: 65%;
-  left: 50%;
+  left: 52%;
   width: 75%;
-  margin: auto;
-  transform: translateX(-50%) translateY(-65%);
-  padding: 20px 40px;
+  transform:  translateX(-52%) translateY(-65%);
   /* background: red; */
 }
 
@@ -3650,4 +3648,21 @@ ul.services-hidden-menu li i{
 
 .about-home-return a, .about-home-return p{
   display: inline-block;
+}
+
+@media (max-width:1201px) {
+  .about-home-return
+  {
+    width: 95%;
+  }
+}
+
+.page2.about-page{
+  width: 70%;
+}
+
+.page2.about-page .subflexbox1 {
+  border-radius: 6px;
+  transform: translateX(0%);
+  background: red;
 }

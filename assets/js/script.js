@@ -214,7 +214,7 @@ $(document).ready(function () {
     let nav = $(".page1 nav");
     let rect1 = page1[0].getBoundingClientRect();
     
-    if (rect1.top <= -70) {
+    if (rect1.top <= -20) {
       gsap.to(nav, {
         top: -50,
         duration: 0.3,
@@ -228,26 +228,6 @@ $(document).ready(function () {
       });
     }
   });
-  // about page
-  $(window).on("scroll", function () {
-    let aboutsection1 = $(".about-hero-section");
-    let aboutnav = $(".about-hero-section nav");
-    let rectabout = aboutsection1[0].getBoundingClientRect();
-
-    if (rectabout.top <= -70) {
-        gsap.to(aboutnav, {
-            top: -50,
-            duration: 0.3,
-            ease: "power4.inOut",
-        });
-    } else {
-        gsap.to(aboutnav, {
-            top: 20,
-            duration: 0.3,
-            ease: "power4.inOut",
-        });
-    }
-});
 
   let animationsTriggered = false;
   $(window).on("scroll", function () {
