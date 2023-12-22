@@ -538,5 +538,18 @@ $(document).ready(function () {
   updateBrInAph1p2();
   $(window).resize(updateBrInAph1p2);
 
+  $(document).ready(function(){
+    $(".about-page-review").owlCarousel({
+      loop: true,
+      margin: 10,
+      dots: true,
+      responsive: {
+        0: {
+          items: 1,
+        },
+      },
+    });
+  });
+
   // this is the ending parenthesis
 });
