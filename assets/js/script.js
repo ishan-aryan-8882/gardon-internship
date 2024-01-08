@@ -13,6 +13,19 @@ $(document).ready(function () {
     autoplayTimeout: 5000,
   });
 
+  $(".about-page-feedback").owlCarousel({
+    loop: true,
+    margin: 10,
+    dots: true,
+    items: 1,
+  });
+
+  let aboutItem = $('.about-page-feedback .item')
+  gsap.from(aboutItem,{
+    opacity:0,
+    duration:1,
+  })
+
   function changeImgSrc() {
     var image = $("#myimage");
     if ($(window).width() < 770) {
@@ -207,13 +220,11 @@ $(document).ready(function () {
     }, 400);
   });
 
-  // nav on pages
-  // home page
   $(window).on("scroll", function () {
     let page1 = $(".page1");
     let nav = $(".page1 nav");
     let rect1 = page1[0].getBoundingClientRect();
-    
+
     if (rect1.top <= -20) {
       gsap.to(nav, {
         top: -50,
@@ -523,7 +534,6 @@ $(document).ready(function () {
   updateBrInAppp2();
   $(window).resize(updateBrInAppp2);
 
-
   function updateBrInAph1p2() {
     var windowWidth = $(window).width();
     var thresholdWidth = 769;
@@ -538,18 +548,66 @@ $(document).ready(function () {
   updateBrInAph1p2();
   $(window).resize(updateBrInAph1p2);
 
-  $(document).ready(function(){
-    $(".about-page-review").owlCarousel({
-      loop: true,
-      margin: 10,
-      dots: true,
-      responsive: {
-        0: {
-          items: 1,
-        },
-      },
+  if ($(".home-page").length) {
+    $(document).ready(equalImgWidth);
+    $(window).resize(equalImgWidth);
+
+    var inputDown =
+      "ontouchstart" in document.documentElement ? "touchstart" : "mousedown";
+    var inputMove =
+      "ontouchmove" in document.documentElement ? "touchmove" : "mousemove";
+    var inputUp =
+      "ontouchend" in document.documentElement ? "touchend" : "mouseup";
+    var handleClicked = false;
+    var containerOffset = $("#divider").offset().left;
+    var containerWidth = $("#divider").outerWidth();
+
+    var slidePercent = "";
+
+    function equalImgWidth() {
+      var divider = $("#divider");
+      var imgWidth = divider.width() + "px";
+
+      $("#beforeImage img").css("width", imgWidth);
+    }
+
+    $("#handle").on(inputDown, handleScaleUp);
+
+    $("#divider").on(inputMove, function (event) {
+      var relativeX = event.pageX ? event.pageX : event.touches[0].pageX;
+      slidePercent =
+        ((relativeX - containerOffset) / containerWidth) * 100 + "%";
+
+      resizeBeforeImage();
     });
-  });
+
+    function handleScaleUp() {
+      handleClicked = true;
+      $("#handle").css("transform", "scale(2, 2)");
+    }
+
+    $(window).on(inputUp, function () {
+      handleScaleDown();
+    });
+
+    function handleScaleDown() {
+      handleClicked = false;
+      $("#handle").css("transform", "scale(1, 1)");
+    }
+
+    function resizeBeforeImage() {
+      if (handleClicked === true) {
+        $("#beforeImage").css("width", slidePercent);
+        $("#handle").css("left", slidePercent);
+      }
+    }
+  }
+
+  let pageaboutfeedbox = $(".page5-container.about-page .review.about-page .item").width();
+  $(".page5-container.about-page .review .item::after").css(
+    "width",pageaboutfeedbox + "px" );
+
+
 
   // this is the ending parenthesis
 });

@@ -24,6 +24,8 @@ a {
   position: fixed;
   z-index: 100;
   border-radius: 50%;
+  scale: 0;
+  opacity: 0;
 }
 
 .circular-div::after {
@@ -41,7 +43,6 @@ a {
 .page1 {
   /* width: 100vw; */
   position: relative;
-  /* overflow: hidden; */
 }
 
 .hero-carousel {
@@ -1543,7 +1544,6 @@ nav-lower-part button {
 }
 
 .page5 {
-  /* width: 100vw; */
   margin: 100px 0;
 }
 
@@ -1674,7 +1674,7 @@ nav-lower-part button {
 
 .review .owl-dots {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   left: 0;
 }
 
@@ -3719,151 +3719,120 @@ ul.services-hidden-menu li i {
   /* margin-bottom: 100px; */
 }
 
-.page8.about-page {
-  margin-bottom: 0;
-  overflow: visible;
-  position: relative;
-  /* border: 2px solid; */
-  border-top-right-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.page8.about-page .imagenew {
-  position: absolute;
-  bottom: 0;
-  border-radius: 0px !important;
-  left: 50px;
-}
-
-.page8-cont-prevent-overflow {
-  width: 65%;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 60px auto;
-  padding: 0 0 0 10px;
-  /* border: 2px solid; */
-}
-
-.page8-cont-prevent-overflow img {
-  background-color: rgb(255, 255, 255);
-  padding: 10px;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-}
-
-.page8.about-page::after {
-  background: none;
-}
-
-.moving-leaf-new-div {
-  position: absolute;
-  inset: 0;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.moving-leaf-new-div img {
-  object-fit: cover;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  filter: opacity(0.2);
-  animation: leafmove 4s linear infinite;
-}
-
-html {
-  overflow-x: hidden;
-}
-
-@media (max-width:1610px){
-  .page8.about-page{
-    padding: 0;
-  }
-
-  .page8-cont-prevent-overflow {
-    width: 100%;
-    justify-content: space-around;
-  }
-}
-
-@media (max-width: 1150px) {
-  .page8-cont-prevent-overflow button{
-    position: static;
-    transform: translate(0);
-    min-width: fit-content;
-  }
-  .page8-cont-prevent-overflow{
-    padding-right: 20px;
-  }
-  .page8-cont-prevent-overflow h4{
-    position: static;
-    transform: translate(0);
-  }
-}
-
-@media (max-width: 951px) {
-  .page8.about-page .page8-cont-prevent-overflow button {
-    position: static;
-  }
-}
-
-@media (max-width: 900px) {
-  .imagenew{
-    position: absolute !important;
-  }
-  img.personpngabout{
-    display: block;
-    z-index: 9;
-  }
-  .page8.about-page {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 !important;
-    margin: auto;
-  }
-  
-  .page8-cont-prevent-overflow{
-    flex-shrink: 0;
-    width: 100% !important;
-    padding: 0 10px;
-  }
-
-  .page8 h4 {
-    transform: translateX(0);
-    text-align: center;
-  }
-}
-
-@media (max-width:769px) {
-  .page8.about-page{
-    width: 80%;
-  }
-  .imagenew{
-    display: none;
-  }
-  .moving-leaf-new-div{
-    display: none;
-  }
-  .page8-cont-prevent-overflow{
-    flex-direction: column;
-    gap: 25px;
-    margin: 20px 0;
-  }
-}
-
-@media (max-width:600px) {
-  .page8.about-page{
-    width: 95%;
-  }
-}
-
-
-.page10.about-page{
+.page10.about-page {
   margin-top: 0;
+}
+
+.rowclass {
+  display: flex;
+  flex-direction: row !important;
+}
+
+.alignitemcenter {
+  align-items: center;
+}
+
+.gap10 {
+  gap: 10px;
+}
+
+.page5.about-page {
+  background: #e9efe5;
+  position: relative;
+  padding: 100px 0;
+}
+
+.page5.about-page .page5-container {
+  border: 2px solid; 
+}
+
+.page5.about-page .item {
+  position: relative;
+  margin-top: 40px;
+  background: none;
+  background: url("https://bracketweb.com/gardon-html/main-html/assets/images/shapes/testimonial-two-shape-1.png")
+    no-repeat bottom/contain;
+  padding: 50px 60px 70px 60px;
+  width: fit-content;
+  transition: all 0.2s;
+}
+
+.page5.about-page .item::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: rgb(255, 255, 255);
+  width: 90px;
+  height: 40px;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.page5.about-page .item::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: white;
+  z-index: -1;
+  border-radius: 6px;
+}
+
+.page5.about-page .item:hover {
+  transform: none;
+}
+
+.page5.about-page .item p {
+  font-size: 20px;
+  line-height:36px;
+  font-weight: 300;
+}
+
+.page5.about-page .page5-container::after {
+  content: "";
+  position: absolute;
+  background:url('https://bracketweb.com/gardon-html/main-html/assets/images/testimonial/testimonial-two-img-1.jpg') no-repeat center/contain;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0%;
+  width: 450px;
+  height: 450px;
+}
+
+.page5.about-page .feedback {
+  padding-left: 0px;
+  width: fit-content;
+}
+
+.page5.about-page .owl-dots button.owl-dot span {
+  background: white;
+  scale: 1.2;
+}
+
+.about-page-stars-for-rating {
+  font-size: 18px;
+  color: white;
+  background: var(--topnav);
+  width: fit-content;
+  border-radius: 6px;
+  display: flex;
+  gap: 20px;
+  padding: 20px 25px;
+}
+
+p.rating-page-text {
+  font-size: 20px !important;
+  font-weight: 300 !important;
+  margin-top: 20px;
+}
+
+.page5.about-page .page5-container .feedback p {
+  font-size: 18px;
+  line-height: 35px;
+}
+
+.page5.about-page .page5-container .feedback p {
+  font-size: 15px;
+  line-height: 30px;
 }
