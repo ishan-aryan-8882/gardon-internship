@@ -26,6 +26,7 @@ a {
   border-radius: 50%;
   scale: 0;
   opacity: 0;
+  transition: width 0.1s, height 0.1s;
 }
 
 .circular-div::after {
@@ -33,7 +34,7 @@ a {
   content: "";
   inset: 0;
   border: 2px solid rgba(4, 214, 4, 0.5);
-  padding: 12px;
+  padding: 10px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -3743,7 +3744,7 @@ ul.services-hidden-menu li i {
 }
 
 .page5.about-page .page5-container {
-  border: 2px solid; 
+  /* border: 2px solid;  */
 }
 
 .page5.about-page .item {
@@ -3752,7 +3753,7 @@ ul.services-hidden-menu li i {
   background: none;
   background: url("https://bracketweb.com/gardon-html/main-html/assets/images/shapes/testimonial-two-shape-1.png")
     no-repeat bottom/contain;
-  padding: 50px 60px 70px 60px;
+  padding: 50px 60px 75px 60px;
   width: fit-content;
   transition: all 0.2s;
 }
@@ -3803,6 +3804,7 @@ ul.services-hidden-menu li i {
 .page5.about-page .feedback {
   padding-left: 0px;
   width: fit-content;
+  padding-bottom: 60px;
 }
 
 .page5.about-page .owl-dots button.owl-dot span {
@@ -3827,12 +3829,106 @@ p.rating-page-text {
   margin-top: 20px;
 }
 
-.page5.about-page .page5-container .feedback p {
+/* .page5.about-page .page5-container .feedback p {
   font-size: 18px;
   line-height: 35px;
-}
+} */
 
 .page5.about-page .page5-container .feedback p {
   font-size: 15px;
   line-height: 30px;
+}
+
+.page5.about-page .page5-container .feedback h2{
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1200px) {
+  .page5.about-page .page5-container {
+    flex-direction: column !important;
+    gap: 10px;
+  }
+  .page5.about-page .page5-container::after {
+    display: none;
+  }
+  .page5.about-page .feedback{
+    width: 100%;
+  }
+  .page5.about-page .feedback h2{
+    margin-bottom: 10px !important;
+  }
+  .page5.about-page .feedback h2 br{
+    display: none;
+  }
+  .page5.about-page .feedback p br{
+    display: none;
+  }
+  .page5.about-page .page5-container .owl-carousel .owl-item {
+    display: flex;
+    justify-content: center;
+  }
+  .page5.about-page .page5-container .feedback {
+    align-items: start;
+  }
+}
+
+@media (max-width:522px) {
+  .page5.about-page .page5-container .feedback h2 {
+    font-size: 30px !important;
+    line-height: 38px;
+    margin-bottom: 5px !important;
+    text-align: left;
+  }
+  .page5.about-page .page5-container .feedback p{
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 300;
+    text-align: left;
+  }
+}
+
+@media (max-width:466px) {
+  .page5.about-page .page5-container .review .item p {
+    font-size: 18px;
+    line-height: 36px;
+  }
+  .page5.about-page .page5-container .review .item p br{
+    display: none;
+  }
+  .page5.about-page .page5-container .review .item {
+    padding: 50px 20px 68px;
+  }
+  .page5.about-page .page5-container .review .item .info .img-name p {
+    font-size: 15px;
+  }
+  p.rating-page-text{
+    font-size: 18px !important;
+  }
+}
+
+@media screen and (max-width:1335px) and (min-width:1199px) {
+  .page5.about-page .page5-container{
+    display: flex !important;
+    flex-direction: row;
+    /* background: red; */
+    padding-bottom: 0px !important;
+  }
+  .page5.about-page .page5-container::after {
+    content: "";
+    position: absolute;
+    background:url('https://bracketweb.com/gardon-html/main-html/assets/images/testimonial/testimonial-two-img-1.jpg') no-repeat center/contain;
+    border-radius: 50%;
+    bottom: 0;
+    right: 0%;
+    width: 450px;
+    height: 450px;
+    top:8%;
+  }
+  .about-page-feedback{
+    /* border: 2px solid; */
+    max-width: 650px !important;
+  }
+  .page5.about-page .page5-container .feedback p br{
+    display: none;
+  }
 }

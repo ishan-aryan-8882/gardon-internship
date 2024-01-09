@@ -20,12 +20,6 @@ $(document).ready(function () {
     items: 1,
   });
 
-  let aboutItem = $('.about-page-feedback .item')
-  gsap.from(aboutItem,{
-    opacity:0,
-    duration:1,
-  })
-
   function changeImgSrc() {
     var image = $("#myimage");
     if ($(window).width() < 770) {
@@ -51,8 +45,8 @@ $(document).ready(function () {
   let cursor = $(".circular-div");
   $(document).on("mousemove", function (e) {
     gsap.to(cursor, {
-      top: e.clientY + 15,
-      left: e.clientX + 15,
+      top: e.clientY + 12,
+      left: e.clientX + 12,
     });
   });
 
@@ -603,11 +597,30 @@ $(document).ready(function () {
     }
   }
 
-  let pageaboutfeedbox = $(".page5-container.about-page .review.about-page .item").width();
+  let pageaboutfeedbox = $(
+    ".page5-container.about-page .review.about-page .item"
+  ).width();
   $(".page5-container.about-page .review .item::after").css(
-    "width",pageaboutfeedbox + "px" );
+    "width",
+    pageaboutfeedbox + "px"
+  );
 
-
+  $(document).on("click", function () {
+    // Set the enlarged size on click
+    cursor.css({
+      width: "20px",  // Adjust the desired enlarged width
+      height: "20px" , // Adjust the desired enlarged height
+    });
+  
+    // Revert to the original size after a delay using setTimeout
+    setTimeout(function () {
+      cursor.css({
+        width: "10px",  // Adjust the original width
+        height: "10px",  // Adjust the original height
+      });
+    }, 200);  // Adjust the delay time in milliseconds as needed
+  });
+  
 
   // this is the ending parenthesis
 });
