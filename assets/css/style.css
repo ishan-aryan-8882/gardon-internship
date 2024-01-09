@@ -2319,18 +2319,21 @@ nav-lower-part button {
   z-index: 1;
   width: fit-content !important;
 }
+
 .page8 button::after {
   content: "";
   position: absolute;
   inset: 0;
   background-color: white;
   transform: translateY(-100%);
-  transition: all 0.6s ease-in-out;
+  transition: all 0.6s cubic-bezier(1, 2, 0.2, 0.6);
   z-index: -1;
+  opacity: 0;
 }
 
 .page8 button:hover:after {
   transform: translateY(0%);
+  opacity: 1;
 }
 
 .page8 button:hover {
@@ -3930,5 +3933,211 @@ p.rating-page-text {
   }
   .page5.about-page .page5-container .feedback p br{
     display: none;
+  }
+}
+
+.page8.about-page{
+  margin-bottom: 0px;
+  padding: 64px 60px 64px 260px;
+  display: flex !important;
+  border-radius: 6px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  justify-content: space-between !important;
+  gap: 10px;
+  width: 1170px;
+  position: relative;
+  overflow: visible;
+}
+
+.page8.about-page::after{
+  display: none;
+}
+
+.page8.about-page img {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.page8.about-page img.about-page-person{
+  background: white;
+  padding: 10px;
+  border-radius: 50%;
+  height: 60px !important;
+}
+
+.box_cover_abs{
+  /* background: red; */
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: -1;
+}
+
+.box_cover_rel{
+  /* background: rgb(71, 67, 164); */
+  width: 100%;
+  height: 100%;
+  left: 0;
+  position: relative;
+}
+
+img.axe_girl{
+  position: absolute;
+  bottom: 0;
+  left: 60px;
+  z-index: -1;
+}
+
+.box_cover_abs_2{
+  position: absolute;
+  /* background: red; */
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  left: 0;
+  z-index: -1;
+
+}
+
+.box_cover_rel_2{
+  position: relative;
+  /* background: rgb(103, 34, 34); */
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: -10;
+  border-radius: 6px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  overflow: hidden;
+}
+
+.box_cover_rel_2::after{
+  position: absolute;
+  content: "";
+  inset:0;
+  right: -100 !important;
+  background: url("https://bracketweb.com/gardon-html/main-html/assets/images/shapes/cta-one-shape-1.png")
+    no-repeat bottom/contain;
+  z-index: -1;
+  filter: opacity(0.15);
+  scale: 3;
+  left: 60%;
+  animation: leafmoves 7s linear infinite;
+}
+
+@keyframes leafmoves {
+  0%,
+  100% {
+    transform: translateY(-40px);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+}
+
+@media (max-width: 1400px) {
+  .page8.about-page {
+    padding-right: 60px !important;
+  }
+}
+@media (max-width: 1272px) {
+  .page8.about-page {
+    padding-right: 0px;
+  }
+  .page8 h4 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 1150px) {
+  .page8.about-page h4 {
+    position: static !important;
+    transform: none;
+  }
+  .page8.about-page button {
+    position: static !important;
+    font-size: 16px;
+    padding: 15px;
+    width: auto;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 951px) {
+  .page8.about-page button {
+    position:static !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .page8.about-page {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+  .page8.about-page {
+    width: 900px;
+    height: 200px;
+    padding: 64px 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .page8.about-page {
+    width: 690px;
+    height: 200px;
+    padding: 64px 30px;
+  }
+  .page8.about-page h4 {
+    font-size: 22px;
+  }
+  .page8.about-page button {
+    font-size: 16px;
+    padding: 15px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width:901px) {
+  .page8.about-page{
+    flex-direction: row;
+    padding: 64px 30px !important;
+  }
+
+  .page8.about-page h4{
+    width: auto;
+    text-align: left;
+  }
+
+  .page8.about-page button{
+    font-size: 16px;
+  }
+}
+
+@media (max-width:769px){
+  .page8.about-page{
+    flex-direction: column;
+    width: 490px;
+    height: 360px;
+  }
+  .page8.about-page h4{
+    font-size: 30px;
+    text-align: center;
+  }
+  .page8.about-page button{
+    padding: 15px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content !important;
   }
 }
